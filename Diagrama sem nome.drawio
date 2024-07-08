@@ -1,9 +1,82 @@
-<mxfile host="app.diagrams.net" modified="2024-07-08T22:52:26.429Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.6.4" etag="6NRE-dP5Lzyn5USH0NUR" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-08T23:16:03.774Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="JOXYWpUHuxLvBukqB1id" version="24.6.4" type="github">
   <diagram name="Página-1" id="GWfQCWBxaoq-QyVKqcau">
-    <mxGraphModel>
+    <mxGraphModel dx="2213" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-1" value="Pessoa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-2" target="0Ir9voSCFmRpAMObhtZs-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-2" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="360" y="130" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-4" target="0Ir9voSCFmRpAMObhtZs-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-4" value="Funcionario" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="261.25" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-7" target="0Ir9voSCFmRpAMObhtZs-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-7" value="Aluno" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="265" width="90" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-10" target="0Ir9voSCFmRpAMObhtZs-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="320.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-10" target="0Ir9voSCFmRpAMObhtZs-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-10" value="Professor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="390" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-13" target="0Ir9voSCFmRpAMObhtZs-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-13" target="0Ir9voSCFmRpAMObhtZs-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-13" value="Diretor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="390" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-14" target="0Ir9voSCFmRpAMObhtZs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-14" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="140" y="320" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-22" value=".lançar notas de turma ou disciplina&#xa;.visualizar a lista de todas as turmas e os conceitos&#xa;.lançar advertencia&#xa;.adicionar professor, disciplina e alunos a turma" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="520" width="130" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-24" value=".Verificar professores e suas avaliacoes &#xa;.Verificar alunos com advertencia&#xa;.Verificar avaliacoes dos alunos quanta a escola" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="520" width="130" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-26" value="&lt;div&gt;.Verificar suas notas&lt;/div&gt;&lt;div&gt;.alugar livro caso n tenha um em aberto&lt;/div&gt;&lt;div&gt;.permite o aluno lançar avaliaçao ao professor e a escola&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="440" width="130" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-29" target="0Ir9voSCFmRpAMObhtZs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-29" value="Turma" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-30" value="Disciplina" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="340" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ir9voSCFmRpAMObhtZs-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.867;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0Ir9voSCFmRpAMObhtZs-30" target="0Ir9voSCFmRpAMObhtZs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
