@@ -3,17 +3,17 @@ package com.pooprojeto.demo;
 import java.time.LocalDate;
 
 public class Turma {
-    private int contador=1;
+    private static int contador=1;
     private int idTurma;
-    private String nome;
+    private String nomeDaTurma;
     private LocalDate dataInicio;
 
     //Getters and Setters
     public String getNome() {
-        return nome;
+        return nomeDaTurma;
     }
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeDaTurma = nome;
     }
     public LocalDate getDataInicio() {
         return dataInicio;
@@ -22,8 +22,8 @@ public class Turma {
         this.dataInicio=dataInicio;
     }
     //Construtor
-    public Turma (String nome, LocalDate dataInicio) {
-        this.nome = nome;
+    public Turma (String nomeDaTurma, LocalDate dataInicio) {
+        this.nomeDaTurma = nomeDaTurma;
         this.dataInicio=dataInicio;
         idTurma=contador;
         contador++;

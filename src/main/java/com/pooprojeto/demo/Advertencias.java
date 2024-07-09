@@ -2,11 +2,11 @@ package com.pooprojeto.demo;
 
 public class Advertencias {
 
-    private static int contador = 1;
+    private static int contador =1;
 
     private int idAdvertencias;
     private String atraso;
-    private String indiciplina;
+    private String indisciplina;
 
     public int getIdAdvertencias(){
         return idAdvertencias;
@@ -14,8 +14,8 @@ public class Advertencias {
     public String getAtraso(){
         return atraso;
     }
-    public String getIndiciplina(){
-        return indiciplina;
+    public String getIndisciplina(){
+        return indisciplina;
     }
     public void setIdAdvertencias(int idAdvertencias){
         this.idAdvertencias = idAdvertencias;
@@ -24,12 +24,12 @@ public class Advertencias {
         this.atraso = atraso;
     }
     public void setIndiciplina(String indiciplina){
-        this.indiciplina = indiciplina;
+        this.indisciplina = indisciplina;
     }
     public Advertencias (String atraso, String indiciplina){
         this.atraso = atraso;
-        this.indiciplina = indiciplina;
-        this.idAdvertencias = contador = 1;
+        this.indisciplina = indisciplina;
+        this.idAdvertencias = contador;
         contador++;
     }
 
