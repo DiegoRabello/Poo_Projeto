@@ -30,7 +30,7 @@ public class Advertencias {
         this.atraso = atraso;
         this.indiciplina = indiciplina;
         this.idAdvertencias = contador = 1;
-        cpntador++
+        contador++;
     }
 
 }

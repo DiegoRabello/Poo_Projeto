@@ -1,6 +1,7 @@
 package com.pooprojeto.demo;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 		limpaConsole();
 		
-		
+       
 	}
 	public static void limpaConsole() {
         try {
