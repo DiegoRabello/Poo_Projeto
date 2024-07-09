@@ -13,8 +13,6 @@ public class DemoApplication {
 		limpaConsole();
 		
 		
-
-
 	}
 	public static void limpaConsole() {
         try {
