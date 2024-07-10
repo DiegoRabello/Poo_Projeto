@@ -8,7 +8,6 @@ public class Aluno extends Pessoa {
     LancamentoNota nota =new LancamentoNota();
     
     //Atributos
-    public static ArrayList<Aluno> alunos = new ArrayList<>();
     private static int contador=1;
 
     private int idAluno;

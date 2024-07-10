@@ -5,15 +5,36 @@ import java.util.Scanner;
 public class Menu {
     Scanner scanner = new Scanner(System.in);
 
-    public void verificarNota(Disciplina disciplina) {
+    public void verificarNota() {
+        BancoDeDados bc = new BancoDeDados();
+        System.out.println("Selecione o aluno:");
+        for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
+            System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
+        }
+        int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
+        Aluno aluno = bc.getListaDeAlunos().get(alunoIndex);
+    
+        System.out.println("Selecione a disciplina:");
+        for (int i = 0; i < bc.getListaDeDisciplinas().size(); i++) {
+            System.out.println((i + 1) + ". " + bc.getListaDeDisciplinas().get(i).getNome());
+        }
+        int disciplinaIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
+        Disciplina disciplina = bc.getListaDeDisciplinas().get(disciplinaIndex);
+    
+        System.out.println("Nota do aluno " + aluno.getNome() + " na disciplina " + disciplina.getNome() + ":");
+        System.out.println("Nota 1: " + disciplina.getNota1());
+        System.out.println("Nota 2: " + disciplina.getNota2());
+        System.out.println("Nota de Recuperação: " + disciplina.getNotaRec());
+        System.out.println("Média: " + disciplina.getMedia());
         
-
-        System.out.println("========== Verificador de Notas =========");
-        System.out.println("Sua Nota do Teste é : "+disciplina.getNota1());  
-        System.out.println("Sua Nota da Prova é : "+disciplina.getNota2()); 
-        System.out.println("Sua Nota da Recuperação é: "+disciplina.getNotaRec()); 
-        System.out.println("Sua Nota Final é: "+disciplina.getMedia());
-        System.out.println("=========================================");   
+        // Disciplina disciplina = aluno.getDisciplina();
+        // System.out.println("========== Verificador de Notas ==========");
+        // System.out.println("Aluno: " + aluno.getNome());
+        // System.out.println("Sua Nota do Teste é : " + disciplina.getNota1());  
+        // System.out.println("Sua Nota da Prova é : " + disciplina.getNota2()); 
+        // System.out.println("Sua Nota da Recuperação é: " + disciplina.getNotaRec()); 
+        // System.out.println("Sua Nota Final é: " + disciplina.getMedia());
+        // System.out.println("========================================="); 
     }
     public void alugarLivro(Aluno aluno) {
          //continuar
@@ -73,7 +94,7 @@ public class Menu {
     public void boletim(){
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
         System.out.println("========== Boletim ==========");
-        for (Aluno aluno : Aluno.alunos) {
+        for (Aluno aluno : bc.getListaDeAlunos()) {
             System.out.println("Aluno: " + aluno.getNome());
             System.out.println("Notas:");
             for (Disciplina disciplina : aluno.getDisciplinas()) {
@@ -87,11 +108,11 @@ public class Menu {
     public void lancarNota () {
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
         System.out.println("Selecione o aluno:");
-        for (int i = 0; i < Aluno.alunos.size(); i++) {
-            System.out.println((i + 1) + ". " + Aluno.alunos.get(i).getNome());
+        for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
+            System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
         }
         int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
-        Aluno aluno = Aluno.alunos.get(alunoIndex);
+        Aluno aluno = bc.getListaDeAlunos().get(alunoIndex);
     
         System.out.println("Selecione a disciplina:");
         for (int i = 0; i < bc.getListaDeDisciplinas().size(); i++) {
