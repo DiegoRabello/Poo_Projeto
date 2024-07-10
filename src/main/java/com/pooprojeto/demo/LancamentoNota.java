@@ -10,12 +10,13 @@ public class LancamentoNota {
     private Professor professor;
     private Aluno aluno;
     private double nota1, nota2, notaRec;
-    private double media = nota1+ nota2;
+    private double media = nota1 + nota2;
 
     // constructor
-    public LancamentoNota () {
-        
+    public LancamentoNota() {
+
     }
+
     public LancamentoNota(TurmaDisciplina turmaDisciplina, Professor professor, Aluno aluno) {
         this.turmaDisciplina = turmaDisciplina;
         this.professor = professor;
@@ -24,6 +25,10 @@ public class LancamentoNota {
     }
 
     // setters
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+
     public void setNota1(double nota1) {
         this.nota1 = nota1;
     }
@@ -39,7 +44,12 @@ public class LancamentoNota {
     public void setMedia(double media) {
         this.media = media;
     }
+
     // getters
+    public Aluno getAluno() {
+        return aluno;
+    }
+
     public double getNota1() {
         return nota1;
     }
@@ -51,15 +61,16 @@ public class LancamentoNota {
     public double getNotaRec() {
         return notaRec;
     }
-    public double getMedia(){
+
+    public double getMedia() {
         return media;
     }
 
-    public boolean aprovadoOuNao(){
+    public boolean aprovadoOuNao() {
         return this.media >= 6.0;
     }
 
-    public boolean recuperacao(){
+    public boolean recuperacao() {
         return this.notaRec >= 6;
     }
 }
