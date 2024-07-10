@@ -130,7 +130,6 @@ public class BancoDeDados {
         }
     }
 
-    // Método para atualizar uma turma na lista de turmas
     public static void atualizarTurma(Turma turmaAtualizada) {
         for (int i = 0; i < listaDeTurmas.size(); i++) {
             if (listaDeTurmas.get(i).equals(turmaAtualizada)) {
@@ -140,7 +139,6 @@ public class BancoDeDados {
         }
     }
 
-    // Método para atualizar uma disciplina na lista de disciplinas
     public static void atualizarDisciplina(Disciplina disciplinaAtualizada) {
         for (int i = 0; i < listaDeDisciplinas.size(); i++) {
             if (listaDeDisciplinas.get(i).equals(disciplinaAtualizada)) {
@@ -150,7 +148,6 @@ public class BancoDeDados {
         }
     }
 
-    // Método para atualizar uma TurmaDisciplina na lista de TurmaDisciplinas
     public static void atualizarTurmaDisciplina(TurmaDisciplina turmaDisciplinaAtualizada) {
         for (int i = 0; i < listaDeTurmaDisciplinas.size(); i++) {
             if (listaDeTurmaDisciplinas.get(i).getTurmaDisciplinaID() == turmaDisciplinaAtualizada.getTurmaDisciplinaID()) {
@@ -160,7 +157,6 @@ public class BancoDeDados {
         }
     }
 
-    // Método para atualizar um LancamentoNota na lista de LancamentoNota
     public static void atualizarLancamentoNota(LancamentoNota lancamentoNotaAtualizada) {
         for (int i = 0; i < listaDeLancamentoNota.size(); i++) {
             if (listaDeLancamentoNota.get(i).getAluno().equals(lancamentoNotaAtualizada.getAluno())) {
