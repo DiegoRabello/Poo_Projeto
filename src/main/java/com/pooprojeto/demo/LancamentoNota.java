@@ -1,7 +1,10 @@
 package com.pooprojeto.demo;
 
+import java.util.ArrayList;
+
 public class LancamentoNota {
 
+    private static ArrayList<LancamentoNota> lancamentoNotas = new ArrayList<>();
     private static int contadorLancamentoNota = 1;
     private int lancamentoNotaID;
     private TurmaDisciplina turmaDisciplina;

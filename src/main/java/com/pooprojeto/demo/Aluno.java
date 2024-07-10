@@ -1,4 +1,5 @@
 package com.pooprojeto.demo;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDate;
 
@@ -7,7 +8,9 @@ public class Aluno extends Pessoa {
     LancamentoNota nota =new LancamentoNota();
     
     //Atributos
-    private int contador=1;
+    public static ArrayList<Aluno> alunos = new ArrayList<>();
+    private static int contador=1;
+
     private int idAluno;
     private int contadorAluguel=0;
     private int numMatricula;
@@ -19,7 +22,7 @@ public class Aluno extends Pessoa {
     public void setnumMatricula (int numMatricula) {
         this.numMatricula=numMatricula;
     }
-
+    
     //Construtores
     
     public Aluno(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login,String senha, Endereco endereco,int numMatricula) {
@@ -27,7 +30,9 @@ public class Aluno extends Pessoa {
         this.numMatricula=numMatricula;
         idAluno=contador;
         contador++;
-        
+    }
+    public Aluno(String nome) {
+        super(nome);
     }
     public void alugarLivro() {
         //continuar
@@ -90,14 +95,23 @@ public class Aluno extends Pessoa {
         av.setComentarioProf(comentario);
         
     }
-    
+    // aluno.verificarNota()
     public void verificarNota() {
+
 
         System.out.println("========== Verificador de Notas =========");
         System.out.println("Sua Nota do Teste é : "+nota.getNota1());  
         System.out.println("Sua Nota da Prova é : "+nota.getNota2()); 
         System.out.println("Sua Nota da Recuperação é: "+nota.getNotaRec()); 
         System.out.println("=========================================");   
+    }
+
+    public void boletim(){
+
+    }
+    public static void criarAluno(String nome){
+        Aluno a1 = new Aluno(nome);
+        Aluno.alunos.add(a1);
     }
 }
 

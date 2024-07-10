@@ -2,6 +2,7 @@ package com.pooprojeto.demo;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +12,16 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		limpaConsole();
+		
+        System.out.println("Digite o nome do aluno");
+        Scanner sc = new Scanner(System.in);
+        String nome = sc.nextLine();
+        Aluno.criarAluno(nome);
+        
+        
+        
+        
+        limpaConsole();
 		
         
         

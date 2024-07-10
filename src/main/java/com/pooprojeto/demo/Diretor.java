@@ -13,9 +13,9 @@ public class Diretor extends Funcionario{
         this.idDiretor = contador;
         contador++;
     }
-    public verificaProfessores () {
-        Professor prof
-    }
+    // public verificaProfessores () {
+    //     Professor prof
+    // }
 }
 
 //Menu Gestor:

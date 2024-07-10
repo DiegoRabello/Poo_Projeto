@@ -20,6 +20,10 @@ public class Pessoa {
     private String senha;
     private Endereco endereco;
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
     //construtores
     public Pessoa(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login, String senha, Endereco endereco) {
         this.nome = nome;
