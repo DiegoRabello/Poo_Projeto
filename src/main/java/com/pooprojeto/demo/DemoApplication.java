@@ -18,13 +18,8 @@ public class DemoApplication {
         String nome = sc.nextLine();
         Aluno.criarAluno(nome);
         
-        
-        
-        
         limpaConsole();
-		
-        
-        
+	
 	}
 	public static void limpaConsole() {
         try {
@@ -38,5 +33,4 @@ public class DemoApplication {
             ex.printStackTrace();
         }
     }
-
 }

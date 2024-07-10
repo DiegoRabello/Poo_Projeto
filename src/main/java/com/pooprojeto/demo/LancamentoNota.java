@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class LancamentoNota {
 
-    private static ArrayList<LancamentoNota> lancamentoNotas = new ArrayList<>();
     private static int contadorLancamentoNota = 1;
     private int lancamentoNotaID;
     private TurmaDisciplina turmaDisciplina;
@@ -62,14 +61,5 @@ public class LancamentoNota {
 
     public boolean recuperacao(){
         return this.notaRec >= 6;
-    }
-    public void verificarNota() {
-
-        System.out.println("========== Verificador de Notas =========");
-        System.out.println("Sua Nota do Teste é : "+this.getNota1());  
-        System.out.println("Sua Nota da Prova é : "+this.getNota2()); 
-        System.out.println("Sua Nota da Recuperação é: "+this.getNotaRec()); 
-        System.out.println("========================================="); 
-          
     }
 }
