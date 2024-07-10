@@ -41,9 +41,7 @@ public class Aluno extends Pessoa {
             contadorAluguel++;
         }else {
             System.out.println("Você ja tem um Aluguel em aberto");
-        }
-        
-        
+        }    
     }
     
     public void devolverLivro() {
