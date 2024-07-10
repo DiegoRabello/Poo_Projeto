@@ -72,19 +72,21 @@ public class Menu {
     }
     public void boletim(){
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
-    System.out.println("========== Boletim ==========");
-    for (Aluno aluno : Aluno.alunos) {
-        System.out.println("Aluno: " + aluno.getNome());
-        System.out.println("Notas:");
-        for (Disciplina disciplina : aluno.getDisciplinas()) {
-            System.out.println("  " + disciplina.getNome() + ": " + disciplina.getMedia());
+        System.out.println("========== Boletim ==========");
+        for (Aluno aluno : Aluno.alunos) {
+            System.out.println("Aluno: " + aluno.getNome());
+            System.out.println("Notas:");
+            for (Disciplina disciplina : aluno.getDisciplinas()) {
+                System.out.println("  " + disciplina.getNome() + ": " + disciplina.getMedia()+"\n" +" Nota 1: "+disciplina.getNota1()+"\n"+" Nota 2: "+disciplina.getNota2()+"\n"+" Nota Recuperação: "+disciplina.getNotaRec());
+            }
+            System.out.println();
         }
-        System.out.println();
+        System.out.println("=================================");
     }
-    System.out.println("=================================");
+    //====== professor =======
+    public void lancarNota () {
+        Disciplina disciplina;
+
+        disciplina.getNome;
     }
-    public static void criarAluno(String nome){
-        Aluno a1 = new Aluno(nome);
-        Aluno.alunos.add(a1);
-    }  
 }

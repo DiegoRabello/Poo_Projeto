@@ -59,6 +59,8 @@ public class BancoDeDados {
         BancoDeDados.listaDeLancamentoNota = listaDeLancamentoNota;
     }
 
+    // Função para adicionar na lista;
+
     public static void adicionarAluno(Aluno aluno) {
         listaDeAlunos.add(aluno);
     }
@@ -83,5 +85,31 @@ public class BancoDeDados {
         listaDeTurmaDisciplinas.add(turmaDisciplina);
     }
 
-    // alunos*, professores*, turma*, disciplina*, turmadisciplina e nota*;
+    // Funções para remover algo das listas
+
+    public static void removerAluno(Aluno aluno) {
+        listaDeAlunos.remove(aluno);
+    }
+
+    public static void removerProfessor(Professor professor) {
+        listaDeProfessores.remove(professor);
+    }
+
+    public static void removerTurma(Turma turma) {
+        listaDeTurmas.remove(turma);
+    }
+
+    public static void removerDisciplina(Disciplina disciplina) {
+        listaDeDisciplinas.remove(disciplina);
+    }
+
+    public static void removerTurmaDisciplina(TurmaDisciplina turmaDisciplina) {
+        listaDeTurmaDisciplinas.remove(turmaDisciplina);
+    }
+
+    public static void removerLancamentoNota(LancamentoNota lancamentoNota){
+        listaDeLancamentoNota.remove(lancamentoNota);
+    }
+
+    // alunos*, professores*, turma*, disciplina*, turmadisciplina* e nota*;
 }

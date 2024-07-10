@@ -59,7 +59,7 @@ public class LancamentoNota {
     //     return this.media >= 6.0;
     // }
 
-<<<<<<< HEAD
+
     // public boolean recuperacao(){
     //     return this.notaRec >= 6;
     // }
@@ -75,6 +75,5 @@ public class LancamentoNota {
 
     // public boolean recuperacao(){
     //     return this.notaRec >= 6;
-    // }
->>>>>>> afdaff003c17a99584432b997997d45b0e6283db
+    // 
 }

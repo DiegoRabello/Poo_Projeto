@@ -16,7 +16,7 @@ public class DemoApplication {
         System.out.println("Digite o nome do aluno");
         Scanner sc = new Scanner(System.in);
         String nome = sc.nextLine();
-        Aluno.criarAluno(nome);
+       
        
 
 
