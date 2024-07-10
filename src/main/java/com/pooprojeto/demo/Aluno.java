@@ -15,7 +15,15 @@ public class Aluno extends Pessoa {
     private int contadorAluguel=0;
     private int numMatricula;
 
+    
+    
     //Getters and Setters
+    public void setContadorAluguel(int contadorAluguel) {
+        this.contadorAluguel = contadorAluguel;
+    }
+    public int getContadorAluguel() {
+        return contadorAluguel;
+    }
     public int getnumMatricula() {
         return numMatricula;
     }
@@ -34,83 +42,74 @@ public class Aluno extends Pessoa {
     public Aluno(String nome) {
         super(nome);
     }
-    public void alugarLivro() {
-        //continuar
-        if (contadorAluguel==0) {
-            System.out.println("Digite o Nome do Livro: ");
-            contadorAluguel++;
-        }else {
-            System.out.println("Você ja tem um Aluguel em aberto");
-        }    
-    }
+    // public void alugarLivro() {
+    //     //continuar
+    //     if (contadorAluguel==0) {
+    //         System.out.println("Digite o Nome do Livro: ");
+    //         contadorAluguel++;
+    //     }else {
+    //         System.out.println("Você ja tem um Aluguel em aberto");
+    //     }    
+    // }
     
-    public void devolverLivro() {
-        //continuar Depois
-        if (contadorAluguel==1) {
-            System.out.println("Livro Devolvido!");
-            contadorAluguel--;
-        } else {
-            System.out.println("Você não tem Livro para devoler!");
-        }
-    }
+    // public void devolverLivro() {
+    //     //continuar Depois
+    //     if (contadorAluguel==1) {
+    //         System.out.println("Livro Devolvido!");
+    //         contadorAluguel--;
+    //     } else {
+    //         System.out.println("Você não tem Livro para devoler!");
+    //     }
+    // }
     
-    public void avaliarEscola() {
-        Avaliacao av = new Avaliacao();
-        System.out.println("Avaliação da Escola:");
-        System.out.println("Digite a nota de 1 a 5 para a infraestrutura:");
-        int infraestrutura = scanner.nextInt(); // assume you have a scanner object
-        av.setInfraestrutura(infraestrutura);
+    // public void avaliarEscola() {
+    //     Avaliacao av = new Avaliacao();
+    //     System.out.println("Avaliação da Escola:");
+    //     System.out.println("Digite a nota de 1 a 5 para a infraestrutura:");
+    //     int infraestrutura = scanner.nextInt(); // assume you have a scanner object
+    //     av.setInfraestrutura(infraestrutura);
 
-        System.out.println("Digite a nota de 1 a 5 para a qualidade do ensino:");
-        int qualidadeEnsino = scanner.nextInt();
-        av.setQualidadeEnsino(qualidadeEnsino);
+    //     System.out.println("Digite a nota de 1 a 5 para a qualidade do ensino:");
+    //     int qualidadeEnsino = scanner.nextInt();
+    //     av.setQualidadeEnsino(qualidadeEnsino);
         
-        System.out.println("Digite a nota de 1 a 5 para a atenção ao aluno:");
-        int atencaoAluno = scanner.nextInt();
-        av.setAtencaoAluno(atencaoAluno);
+    //     System.out.println("Digite a nota de 1 a 5 para a atenção ao aluno:");
+    //     int atencaoAluno = scanner.nextInt();
+    //     av.setAtencaoAluno(atencaoAluno);
         
-        System.out.println("Digite um comentário sobre a escola:");
-        String comentario = scanner.next();
-        av.setComentario(comentario);
+    //     System.out.println("Digite um comentário sobre a escola:");
+    //     String comentario = scanner.next();
+    //     av.setComentario(comentario);
         
-        System.out.println("Avaliação realizada com sucesso!");
-    }   
+    //     System.out.println("Avaliação realizada com sucesso!");
+    // }   
     
-    public void avaliarProfessor() {
-        Avaliacao av=new Avaliacao();
+    // public void avaliarProfessor() {
+    //     Avaliacao av=new Avaliacao();
         
-        System.out.println("Avaliação do Professor:");
-        System.out.println("Digite a nota de 1 a 5 para o MétodoDidatico:");
-        int metodoDidatico = scanner.nextInt(); // assume you have a scanner object
-        av.setMetodoDidatico(metodoDidatico);
+    //     System.out.println("Avaliação do Professor:");
+    //     System.out.println("Digite a nota de 1 a 5 para o MétodoDidatico:");
+    //     int metodoDidatico = scanner.nextInt(); // assume you have a scanner object
+    //     av.setMetodoDidatico(metodoDidatico);
 
-        System.out.println("Digite a nota de 1 a 5 para o carisma do Professor:");
-        int carisma = scanner.nextInt();
-        av.setCarisma(carisma);
+    //     System.out.println("Digite a nota de 1 a 5 para o carisma do Professor:");
+    //     int carisma = scanner.nextInt();
+    //     av.setCarisma(carisma);
 
-        System.out.println("Digite um comentário sobre o Professor:");
-        String comentario = scanner.next();
-        av.setComentarioProf(comentario);
+    //     System.out.println("Digite um comentário sobre o Professor:");
+    //     String comentario = scanner.next();
+    //     av.setComentarioProf(comentario);
         
-    }
-    // aluno.verificarNota()
-    public void verificarNota() {
+    // }
+    // // aluno.verificarNota()
+    
+    // public void boletim(){
 
-
-        System.out.println("========== Verificador de Notas =========");
-        System.out.println("Sua Nota do Teste é : "+nota.getNota1());  
-        System.out.println("Sua Nota da Prova é : "+nota.getNota2()); 
-        System.out.println("Sua Nota da Recuperação é: "+nota.getNotaRec()); 
-        System.out.println("=========================================");   
-    }
-
-    public void boletim(){
-
-    }
-    public static void criarAluno(String nome){
-        Aluno a1 = new Aluno(nome);
-        Aluno.alunos.add(a1);
-    }
+    // }
+    // public static void criarAluno(String nome){
+    //     Aluno a1 = new Aluno(nome);
+    //     Aluno.alunos.add(a1);
+    // }
 }
 
 //Menu Aluno:

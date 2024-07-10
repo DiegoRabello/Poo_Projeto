@@ -17,9 +17,9 @@ public class DemoApplication {
         Scanner sc = new Scanner(System.in);
         String nome = sc.nextLine();
         Aluno.criarAluno(nome);
-        
-        
-        
+       
+
+
         
         limpaConsole();
 		
