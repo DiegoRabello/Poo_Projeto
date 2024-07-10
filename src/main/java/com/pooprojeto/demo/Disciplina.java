@@ -52,4 +52,9 @@ public class Disciplina {
     public double getMedia() {
         return media;
     }
+
+    public String getNome() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNome'");
+    }
 }

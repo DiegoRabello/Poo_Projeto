@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class LancamentoNota {
 
-    private static ArrayList<LancamentoNota> lancamentoNotas = new ArrayList<>();
     private static int contadorLancamentoNota = 1;
     private int lancamentoNotaID;
     private TurmaDisciplina turmaDisciplina;
@@ -60,6 +59,7 @@ public class LancamentoNota {
     //     return this.media >= 6.0;
     // }
 
+<<<<<<< HEAD
     // public boolean recuperacao(){
     //     return this.notaRec >= 6;
     // }
@@ -72,4 +72,9 @@ public class LancamentoNota {
     //     System.out.println("========================================="); 
           
     // }
+
+    // public boolean recuperacao(){
+    //     return this.notaRec >= 6;
+    // }
+>>>>>>> afdaff003c17a99584432b997997d45b0e6283db
 }

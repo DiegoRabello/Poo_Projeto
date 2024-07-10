@@ -51,6 +51,10 @@ public class Aluno extends Pessoa {
     //         System.out.println("Você ja tem um Aluguel em aberto");
     //     }    
     // }
+    public Disciplina[] getDisciplinas() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDisciplinas'");
+    }
     
     // public void devolverLivro() {
     //     //continuar Depois

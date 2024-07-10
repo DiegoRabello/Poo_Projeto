@@ -22,9 +22,7 @@ public class DemoApplication {
 
         
         limpaConsole();
-		
-        
-        
+	
 	}
 	public static void limpaConsole() {
         try {
@@ -38,5 +36,4 @@ public class DemoApplication {
             ex.printStackTrace();
         }
     }
-
 }

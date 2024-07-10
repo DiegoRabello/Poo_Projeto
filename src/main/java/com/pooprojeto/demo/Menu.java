@@ -1,6 +1,9 @@
 package com.pooprojeto.demo;
 
+import java.util.Scanner;
+
 public class Menu {
+    Scanner scanner = new Scanner(System.in);
 
     public void verificarNota(Disciplina disciplina) {
         
@@ -29,5 +32,59 @@ public class Menu {
             System.out.println("Você não tem Livro para devoler!");
         }
     }
+    public void avaliarEscola() {
+            Avaliacao av = new Avaliacao();
+            System.out.println("Avaliação da Escola:");
+            System.out.println("Digite a nota de 1 a 5 para a infraestrutura:");
+            int infraestrutura = scanner.nextInt(); // assume you have a scanner object
+            av.setInfraestrutura(infraestrutura);
     
+            System.out.println("Digite a nota de 1 a 5 para a qualidade do ensino:");
+            int qualidadeEnsino = scanner.nextInt();
+            av.setQualidadeEnsino(qualidadeEnsino);
+            
+            System.out.println("Digite a nota de 1 a 5 para a atenção ao aluno:");
+            int atencaoAluno = scanner.nextInt();
+            av.setAtencaoAluno(atencaoAluno);
+            
+            System.out.println("Digite um comentário sobre a escola:");
+            String comentario = scanner.next();
+            av.setComentario(comentario);
+            
+            System.out.println("Avaliação realizada com sucesso!");
+    } 
+    public void avaliarProfessor() {
+        Avaliacao av=new Avaliacao();
+        
+        System.out.println("Avaliação do Professor:");
+        System.out.println("Digite a nota de 1 a 5 para o MétodoDidatico:");
+        int metodoDidatico = scanner.nextInt(); // assume you have a scanner object
+        av.setMetodoDidatico(metodoDidatico);
+
+        System.out.println("Digite a nota de 1 a 5 para o carisma do Professor:");
+        int carisma = scanner.nextInt();
+        av.setCarisma(carisma);
+
+        System.out.println("Digite um comentário sobre o Professor:");
+        String comentario = scanner.next();
+        av.setComentarioProf(comentario);
+        
+    }
+    public void boletim(){
+        BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
+    System.out.println("========== Boletim ==========");
+    for (Aluno aluno : Aluno.alunos) {
+        System.out.println("Aluno: " + aluno.getNome());
+        System.out.println("Notas:");
+        for (Disciplina disciplina : aluno.getDisciplinas()) {
+            System.out.println("  " + disciplina.getNome() + ": " + disciplina.getMedia());
+        }
+        System.out.println();
+    }
+    System.out.println("=================================");
+    }
+    public static void criarAluno(String nome){
+        Aluno a1 = new Aluno(nome);
+        Aluno.alunos.add(a1);
+    }  
 }
