@@ -55,6 +55,10 @@ public class Aluno extends Pessoa {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getDisciplinas'");
     }
+    public Avaliacao[] Avaliacao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'Avaliacao'");
+    }
     
     // public void devolverLivro() {
     //     //continuar Depois

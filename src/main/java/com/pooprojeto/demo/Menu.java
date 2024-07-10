@@ -9,7 +9,7 @@ public class Menu {
         
 
         System.out.println("========== Verificador de Notas =========");
-        System.out.println("Sua Nota do Teste é : "+disciplina .getNota1());  
+        System.out.println("Sua Nota do Teste é : "+disciplina.getNota1());  
         System.out.println("Sua Nota da Prova é : "+disciplina.getNota2()); 
         System.out.println("Sua Nota da Recuperação é: "+disciplina.getNotaRec()); 
         System.out.println("Sua Nota Final é: "+disciplina.getMedia());
@@ -85,8 +85,55 @@ public class Menu {
     }
     //====== professor =======
     public void lancarNota () {
-        Disciplina disciplina;
+        BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
+        System.out.println("Selecione o aluno:");
+        for (int i = 0; i < Aluno.alunos.size(); i++) {
+            System.out.println((i + 1) + ". " + Aluno.alunos.get(i).getNome());
+        }
+        int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
+        Aluno aluno = Aluno.alunos.get(alunoIndex);
+    
+        System.out.println("Selecione a disciplina:");
+        for (int i = 0; i < bc.getListaDeDisciplinas().size(); i++) {
+            System.out.println((i + 1) + ". " + bc.getListaDeDisciplinas().get(i).getNome());
+        }
+        int disciplinaIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
+        Disciplina disciplina = bc.getListaDeDisciplinas().get(disciplinaIndex);
+    
+        System.out.println("Digite a nota 1:");
+        double nota1 = scanner.nextDouble();
+        disciplina.setNota1(nota1);
+    
+        System.out.println("Digite a nota 2:");
+        double nota2 = scanner.nextDouble();
+        disciplina.setNota2(nota2);
+    
+        System.out.println("Digite a nota de recuperação (ou 0 se não houver):");
+        double notaRec = scanner.nextDouble();
+        disciplina.setNotaRec(notaRec);
+    
+        System.out.println("Nota lançada com sucesso!");
+    }
+    public void  verListaTurmaConceito() {
+      
+        BancoDeDados bc = new BancoDeDados();
+        System.out.println("========== Lista de Alunos e Avaliações ==========");
+        for (Aluno aluno : bc.getListaDeAlunos()) {
+            System.out.println("Aluno: " + aluno.getNome());
+            System.out.println("Avaliações:");
+            for (Avaliacao avaliacao : aluno.Avaliacao()) {
+                System.out.println("  - Infraestrutura: " + avaliacao.getInfraestrutura());
+                System.out.println("  - Qualidade do Ensino: " + avaliacao.getQualidadeEnsino());
+                System.out.println("  - Atenção ao Aluno: " + avaliacao.getAtencaoAluno());
+                System.out.println("  - Comentário: " + avaliacao.getComentario());
+            }
+        System.out.println();
+    }
+    System.out.println("=================================================");
+        // BancoDeDados bc = new BancoDeDados();
 
-        disciplina.getNome;
+        // for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
+        //     System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
+        // }
     }
 }

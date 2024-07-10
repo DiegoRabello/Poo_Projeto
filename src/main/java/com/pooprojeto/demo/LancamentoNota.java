@@ -13,14 +13,20 @@ public class LancamentoNota {
     // private double media = nota1+ nota2;
 
     // constructor
-    public LancamentoNota () {
-        
+    public LancamentoNota() {
+
     }
+
     public LancamentoNota(TurmaDisciplina turmaDisciplina, Professor professor, Aluno aluno) {
         this.turmaDisciplina = turmaDisciplina;
         this.professor = professor;
         lancamentoNotaID = contadorLancamentoNota;
         contadorLancamentoNota++;
+    }
+
+    public Object getAluno() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAluno'");
     }
 
     // setters

@@ -107,8 +107,63 @@ public class BancoDeDados {
         listaDeTurmaDisciplinas.remove(turmaDisciplina);
     }
 
-    public static void removerLancamentoNota(LancamentoNota lancamentoNota){
+    public static void removerLancamentoNota(LancamentoNota lancamentoNota) {
         listaDeLancamentoNota.remove(lancamentoNota);
+    }
+
+    // metodos de substituição
+
+    public static void atualizarAluno(Aluno alunoAtualizado) {
+        for (int i = 0; i < listaDeAlunos.size(); i++) {
+            if (listaDeAlunos.get(i).getNome().equals(alunoAtualizado.getNome())) {
+                listaDeAlunos.set(i, alunoAtualizado);
+                return;
+            }
+        }
+    }
+    public static void atualizarProfessor(Professor professorAtualizado) {
+        for (int i = 0; i < listaDeProfessores.size(); i++) {
+            if (listaDeProfessores.get(i).getNome().equals(professorAtualizado.getNome())) {
+                listaDeProfessores.set(i, professorAtualizado);
+                return;
+            }
+        }
+    }
+
+    public static void atualizarTurma(Turma turmaAtualizada) {
+        for (int i = 0; i < listaDeTurmas.size(); i++) {
+            if (listaDeTurmas.get(i).equals(turmaAtualizada)) {
+                listaDeTurmas.set(i, turmaAtualizada);
+                return;
+            }
+        }
+    }
+
+    public static void atualizarDisciplina(Disciplina disciplinaAtualizada) {
+        for (int i = 0; i < listaDeDisciplinas.size(); i++) {
+            if (listaDeDisciplinas.get(i).equals(disciplinaAtualizada)) {
+                listaDeDisciplinas.set(i, disciplinaAtualizada);
+                return;
+            }
+        }
+    }
+
+    public static void atualizarTurmaDisciplina(TurmaDisciplina turmaDisciplinaAtualizada) {
+        for (int i = 0; i < listaDeTurmaDisciplinas.size(); i++) {
+            if (listaDeTurmaDisciplinas.get(i).getTurmaDisciplinaID() == turmaDisciplinaAtualizada.getTurmaDisciplinaID()) {
+                listaDeTurmaDisciplinas.set(i, turmaDisciplinaAtualizada);
+                return;
+            }
+        }
+    }
+
+    public static void atualizarLancamentoNota(LancamentoNota lancamentoNotaAtualizada) {
+        for (int i = 0; i < listaDeLancamentoNota.size(); i++) {
+            if (listaDeLancamentoNota.get(i).getAluno().equals(lancamentoNotaAtualizada.getAluno())) {
+                listaDeLancamentoNota.set(i, lancamentoNotaAtualizada);
+                return;
+            }
+        }
     }
 
     // alunos*, professores*, turma*, disciplina*, turmadisciplina* e nota*;
