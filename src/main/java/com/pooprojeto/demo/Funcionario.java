@@ -18,11 +18,7 @@ abstract class Funcionario extends Pessoa{
 
         this.salario = salario;
         this.idFuncionario = contador;
-        contador++;
-
-
-
-        
+        contador++; 
     }
     // @Override
     // public boolean autentica(String login, String senha){

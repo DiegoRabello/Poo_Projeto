@@ -8,7 +8,6 @@ public class Disciplina {
     private int disciplinaID;
     private String nomeDisciplina;
     private double nota1, nota2, notaRec;
-    
 
     public double getNota1() {
         return nota1;
@@ -33,21 +32,22 @@ public class Disciplina {
     public void setNotaRec(double notaRec) {
         this.notaRec = notaRec;
     }
+
     public Disciplina(String nome, LocalDate dataInicio, String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;
         disciplinaID = contadorDisciplina;
         contadorDisciplina++;
     }
-    
+
     public String getNomeDisciplina() {
         return nomeDisciplina;
     }
-    
+
     public void setNomeDisciplina(String nomeDisciplina) {
         this.nomeDisciplina = nomeDisciplina;
     }
-    private double media = (nota1+nota2)/2;
 
+    private double media = (nota1 + nota2) / 2;
 
     public double getMedia() {
         return media;
@@ -56,5 +56,13 @@ public class Disciplina {
     public String getNome() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getNome'");
+    }
+
+    public int getDisciplinaID() {
+        return disciplinaID;
+    }
+
+    public void setDisciplinaID(int disciplinaID) {
+        this.disciplinaID = disciplinaID;
     }
 }
