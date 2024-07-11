@@ -9,7 +9,12 @@ public class Disciplina {
     private String nomeDisciplina;
     private double nota1, nota2, notaRec;
     
-
+    
+    public Disciplina( LocalDate dataInicio, String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
+        disciplinaID = contadorDisciplina;
+        contadorDisciplina++;
+    }
     public double getNota1() {
         return nota1;
     }
@@ -32,11 +37,6 @@ public class Disciplina {
 
     public void setNotaRec(double notaRec) {
         this.notaRec = notaRec;
-    }
-    public Disciplina(String nome, LocalDate dataInicio, String nomeDisciplina) {
-        this.nomeDisciplina = nomeDisciplina;
-        disciplinaID = contadorDisciplina;
-        contadorDisciplina++;
     }
     
     public String getNomeDisciplina() {

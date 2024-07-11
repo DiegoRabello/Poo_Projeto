@@ -6,36 +6,24 @@ public class Menu {
     
 
     public void verificarNota() {
-        BancoDeDados bc = new BancoDeDados();
+        Scanner scanner = new Scanner(System.in);
+        BancoDeDados.getListaDeAlunos();
         System.out.println("Selecione o aluno:");
-        for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
-            System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
+        for (int i = 0; i < BancoDeDados.getListaDeAlunos().size(); i++) {
+            System.out.println((i + 1) + ". " + BancoDeDados.getListaDeAlunos().get(i).getNome());
         }
         int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
-        Aluno aluno = bc.getListaDeAlunos().get(alunoIndex);
-    
+        Aluno aluno = BancoDeDados.getListaDeAlunos().get(alunoIndex);
+
         System.out.println("Selecione a disciplina:");
-        for (int i = 0; i < bc.getListaDeDisciplinas().size(); i++) {
-            System.out.println((i + 1) + ". " + bc.getListaDeDisciplinas().get(i).getNome());
-        }
+
         int disciplinaIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
-        Disciplina disciplina = bc.getListaDeDisciplinas().get(disciplinaIndex);
-    
-        System.out.println("Nota do aluno " + aluno.getNome() + " na disciplina " + disciplina.getNome() + ":");
-        System.out.println("Nota 1: " + disciplina.getNota1());
-        System.out.println("Nota 2: " + disciplina.getNota2());
-        System.out.println("Nota de Recuperação: " + disciplina.getNotaRec());
-        System.out.println("Média: " + disciplina.getMedia());
-        scanner.close();
-        
-        // Disciplina disciplina = aluno.getDisciplina();
-        // System.out.println("========== Verificador de Notas ==========");
-        // System.out.println("Aluno: " + aluno.getNome());
-        // System.out.println("Sua Nota do Teste é : " + disciplina.getNota1());  
-        // System.out.println("Sua Nota da Prova é : " + disciplina.getNota2()); 
-        // System.out.println("Sua Nota da Recuperação é: " + disciplina.getNotaRec()); 
-        // System.out.println("Sua Nota Final é: " + disciplina.getMedia());
-        // System.out.println("========================================="); 
+        Disciplina disciplina = BancoDeDados.getListaDeDisciplinas().get(disciplinaIndex);
+
+        System.out.println("Nota do aluno "+aluno.getNome()+" na disciplina "+disciplina.getNome()+":");
+        System.out.println("Nota 1: "+disciplina.getNota1());System.out.println("Nota 2: "+disciplina.getNota2());
+        System.out.println("Nota de Recuperação: "+disciplina.getNotaRec());
+        System.out.println("Média: "+disciplina.getMedia());
     }
     public void alugarLivro(Aluno aluno) {
          //continuar
@@ -96,72 +84,63 @@ public class Menu {
         scanner.close();
     }
     public void boletim(){
-        BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
+      
         System.out.println("========== Boletim ==========");
-        for (Aluno aluno : bc.getListaDeAlunos()) {
+        for (Aluno aluno : BancoDeDados.getListaDeAlunos()) {
             System.out.println("Aluno: " + aluno.getNome());
             System.out.println("Notas:");
-            for (Disciplina disciplina : aluno.getDisciplinas()) {
-                System.out.println("  " + disciplina.getNome() + ": " + disciplina.getMedia()+"\n" +" Nota 1: "+disciplina.getNota1()+"\n"+" Nota 2: "+disciplina.getNota2()+"\n"+" Nota Recuperação: "+disciplina.getNotaRec());
-            }
             System.out.println();
         }
         System.out.println("=================================");
     }
     //====== professor =======
     public void lancarNota () {
-        BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Selecione o aluno:");
         for (int i = 0; i < BancoDeDados.getListaDeAlunos().size(); i++) {
             System.out.println((i + 1) + ". " + BancoDeDados.getListaDeAlunos().get(i).getNome());
         }
-        int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
+        int alunoIndex = scanner.nextInt() - 1;
         Aluno aluno = BancoDeDados.getListaDeAlunos().get(alunoIndex);
-    
+
         System.out.println("Selecione a disciplina:");
-        
-        //Menu de selecao
-        System.out.println(aluno.getGeografia());
-        System.out.println(aluno.getHistoria());
-        System.out.println(aluno.getMatematica());
-
-        Disciplina disciplinaSelecionada = aluno.getGeografia();
-
-        System.out.println("Digite a nota 1:");
-        double nota1 = scanner.nextDouble();
-        disciplinaSelecionada.setNota1(nota1);
-    
-        System.out.println("Digite a nota 2:");
-        double nota2 = scanner.nextDouble();
-        disciplinaSelecionada.setNota2(nota2);
-    
-        System.out.println("Digite a nota de recuperação (ou 0 se não houver):");
-        double notaRec = scanner.nextDouble();
-        disciplinaSelecionada.setNotaRec(notaRec);
-    
+        System.out.println("1. Geografia");
+        System.out.println("2. Historia");
+        System.out.println("3. Matemática");
+        int escolha = scanner.nextInt();
+        Disciplina disciplinaSelecionada;
+        switch (escolha) {
+            case 1:
+                disciplinaSelecionada = aluno.getGeografia();
+                System.out.println("Digite a nota 1:");
+                double nota1 = scanner.nextDouble();
+                disciplinaSelecionada.setNota1(nota1);
+                break;
+            case 2:
+                disciplinaSelecionada = aluno.getHistoria();
+                System.out.println("Digite a nota 2:");
+                double nota2 = scanner.nextDouble();
+                disciplinaSelecionada.setNota2(nota2);
+                break;
+            case 3:
+                disciplinaSelecionada = aluno.getMatematica();
+                System.out.println("Digite a nota de recuperação (ou 0 se não houver):");
+                double notaRec = scanner.nextDouble();
+                disciplinaSelecionada.setNotaRec(notaRec);
+                break;
+        }
         System.out.println("Nota lançada com sucesso!");
         scanner.close();
     }
     public void  verListaTurmaConceito() {
-      
-        BancoDeDados bc = new BancoDeDados();
         System.out.println("========== Lista de Alunos e Avaliações ==========");
-        for (Aluno aluno : bc.getListaDeAlunos()) {
+        for (Aluno aluno : BancoDeDados.getListaDeAlunos()) {
             System.out.println("Aluno: " + aluno.getNome());
             System.out.println("Avaliações:");
-            for (Avaliacao avaliacao : aluno.Avaliacao()) {
-                System.out.println("  - Infraestrutura: " + avaliacao.getInfraestrutura());
-                System.out.println("  - Qualidade do Ensino: " + avaliacao.getQualidadeEnsino());
-                System.out.println("  - Atenção ao Aluno: " + avaliacao.getAtencaoAluno());
-                System.out.println("  - Comentário: " + avaliacao.getComentario());
-            }
+            
         System.out.println();
     }
-    System.out.println("=================================================");
-        // BancoDeDados bc = new BancoDeDados();
-
-        // for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
-        //     System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
-        // }
+    System.out.println("=================================================");  
     }
 }
