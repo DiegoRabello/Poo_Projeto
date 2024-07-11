@@ -22,9 +22,8 @@ public class Turma {
         this.dataInicio=dataInicio;
     }
     //Construtor
-    public Turma (String nomeDaTurma, LocalDate dataInicio) {
+    public Turma (String nomeDaTurma) {
         this.nomeDaTurma = nomeDaTurma;
-        this.dataInicio=dataInicio;
         idTurma=contador;
         contador++;
     }

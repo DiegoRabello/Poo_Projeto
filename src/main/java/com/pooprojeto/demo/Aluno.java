@@ -18,13 +18,24 @@ public class Aluno extends Pessoa {
 
     //disciplinas
 
-    private static Disciplina logicaProgramaçao;
-    private static Disciplina pOO;
-    private static Disciplina api;
-    private static Disciplina frontEnd;
-    private static Disciplina backEnd;
+        // private static Disciplina logicaProgramaçao = new Disciplina( LocalDate.of(2024, 5, 10), "logica de Programação");
 
+     
+        // private static Disciplina poO = new Disciplina( LocalDate.of(2024, 5, 20), "Programção Orientada Objetos");
+        
+        // private static Disciplina api = new Disciplina( LocalDate.of(2024, 5, 30), "Api");
+        // private static Disciplina frontEnd = new Disciplina( LocalDate.of(2024, 5, 30), "FrontEnd");
+        // private static Disciplina backEnd = new Disciplina( LocalDate.of(2024, 5, 30), "BackEnd");
     
+    
+    //Construtores
+   
+    public Aluno(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login,String senha, Endereco endereco,int numMatricula) {
+        super(nome, dtNascimento, cpf, email, telefone, login, senha, endereco);
+        this.numMatricula=numMatricula;
+        idAluno=contador;
+        contador++;
+    }
     //Getters and Setters
     public void setContadorAluguel(int contadorAluguel) {
         this.contadorAluguel = contadorAluguel;
@@ -39,14 +50,6 @@ public class Aluno extends Pessoa {
         this.numMatricula=numMatricula;
     }
     
-    //Construtores
-    
-    public Aluno(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login,String senha, Endereco endereco,int numMatricula) {
-        super(nome, dtNascimento, cpf, email, telefone, login, senha, endereco);
-        this.numMatricula=numMatricula;
-        idAluno=contador;
-        contador++;
-    }
     public Aluno(String nome) {
         super(nome);
     }
@@ -86,8 +89,14 @@ public class Aluno extends Pessoa {
     public void setMatematica(Disciplina matematica) {
         this.matematica = matematica;
     }
+    public class Builder {
 
-    
+		public Object nome(String string) {
+			// TODO Auto-generated method stub
+			throw new UnsupportedOperationException("Unimplemented method 'nome'");
+		}
+
+    }
 }
 
 //Menu Aluno:
