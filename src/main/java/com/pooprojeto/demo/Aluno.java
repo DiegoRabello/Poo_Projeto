@@ -8,6 +8,7 @@ public class Aluno extends Pessoa {
     LancamentoNota nota =new LancamentoNota();
     
     //Atributos
+
     private static int contador=1;
 
     private int idAluno;

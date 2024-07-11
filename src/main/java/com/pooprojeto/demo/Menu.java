@@ -3,9 +3,10 @@ package com.pooprojeto.demo;
 import java.util.Scanner;
 
 public class Menu {
-    Scanner scanner = new Scanner(System.in);
+    
 
     public void verificarNota() {
+        Scanner scanner = new Scanner(System.in);
         BancoDeDados bc = new BancoDeDados();
         System.out.println("Selecione o aluno:");
         for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
@@ -26,6 +27,7 @@ public class Menu {
         System.out.println("Nota 2: " + disciplina.getNota2());
         System.out.println("Nota de Recuperação: " + disciplina.getNotaRec());
         System.out.println("Média: " + disciplina.getMedia());
+        scanner.close();
         
         // Disciplina disciplina = aluno.getDisciplina();
         // System.out.println("========== Verificador de Notas ==========");
@@ -54,6 +56,7 @@ public class Menu {
         }
     }
     public void avaliarEscola() {
+        Scanner scanner = new Scanner(System.in);
             Avaliacao av = new Avaliacao();
             System.out.println("Avaliação da Escola:");
             System.out.println("Digite a nota de 1 a 5 para a infraestrutura:");
@@ -73,8 +76,10 @@ public class Menu {
             av.setComentario(comentario);
             
             System.out.println("Avaliação realizada com sucesso!");
+            scanner.close();
     } 
     public void avaliarProfessor() {
+        Scanner scanner = new Scanner(System.in);
         Avaliacao av=new Avaliacao();
         
         System.out.println("Avaliação do Professor:");
@@ -89,7 +94,7 @@ public class Menu {
         System.out.println("Digite um comentário sobre o Professor:");
         String comentario = scanner.next();
         av.setComentarioProf(comentario);
-        
+        scanner.close();
     }
     public void boletim(){
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
@@ -106,6 +111,7 @@ public class Menu {
     }
     //====== professor =======
     public void lancarNota () {
+        Scanner scanner = new Scanner(System.in);
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
         System.out.println("Selecione o aluno:");
         for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
@@ -134,6 +140,7 @@ public class Menu {
         disciplina.setNotaRec(notaRec);
     
         System.out.println("Nota lançada com sucesso!");
+        scanner.close();
     }
     public void  verListaTurmaConceito() {
       
