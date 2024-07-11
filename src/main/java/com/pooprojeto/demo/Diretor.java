@@ -15,7 +15,7 @@ public class Diretor extends Funcionario{
     }
     // public verificaProfessores () {
     //     Professor prof
-    // }
+    // }        System.out.println("");
 }
 
 //Menu Gestor:

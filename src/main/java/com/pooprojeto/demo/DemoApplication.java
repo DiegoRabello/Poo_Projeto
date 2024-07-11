@@ -17,6 +17,25 @@ public class DemoApplication {
         limpaConsole();
         alimentaBanco(); 
         
+            // System.out.println("======= lancar nota ======");
+            // Menu.lancarNota();
+            // // System.out.println("======= lancar nota ======");
+            // // Menu.lancarNota();
+            // // System.out.println("======= lancar nota ======");
+            // // Menu.lancarNota();
+            // System.out.println("======= Verificar nota ======");
+            // Menu.verificarNota();
+            // Menu.avaliarProfessor();
+            Menu.avaliarProfessor();
+            Menu.avaliarProfessor();
+            Menu.avaliarProfessor();
+            
+            
+
+            
+        
+
+        
         // logica para ver a lista de alunos  
         // List<Aluno> listaDeAlunos = BancoDeDados.getListaDeAlunos();
         // System.out.println("Lista de Alunos:");

@@ -8,28 +8,22 @@ public class Aluno extends Pessoa {
     //Atributos
 
     private static int contador=1;
-
     private int idAluno;
     private int contadorAluguel=0;
     private int numMatricula;
-    private Disciplina historia;
-    private Disciplina geografia;
-    private Disciplina matematica;
+    private double nota1, nota2, notaRec;
+    private double media,mediaRec;
 
-    //disciplinas
+    private int qualidadeEnsino; //Avaliar Escola
+    private int atencaoAluno;//Avaliar Escola
+    private int idAvaliacao;
+    private String comentario;
+    private int metodoDidatico;
+    private int carisma;
+    private String comentarioProf;
 
-        // private static Disciplina logicaProgramaçao = new Disciplina( LocalDate.of(2024, 5, 10), "logica de Programação");
-
-     
-        // private static Disciplina poO = new Disciplina( LocalDate.of(2024, 5, 20), "Programção Orientada Objetos");
-        
-        // private static Disciplina api = new Disciplina( LocalDate.of(2024, 5, 30), "Api");
-        // private static Disciplina frontEnd = new Disciplina( LocalDate.of(2024, 5, 30), "FrontEnd");
-        // private static Disciplina backEnd = new Disciplina( LocalDate.of(2024, 5, 30), "BackEnd");
-    
-    
-    //Construtores
    
+    //Construtores
     public Aluno(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login,String senha, Endereco endereco,int numMatricula) {
         super(nome, dtNascimento, cpf, email, telefone, login, senha, endereco);
         this.numMatricula=numMatricula;
@@ -37,6 +31,43 @@ public class Aluno extends Pessoa {
         contador++;
     }
     //Getters and Setters
+    public  double getNota1() {
+        return nota1;
+    }
+    public  void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+    public  double getNota2() {
+        return nota2;
+    }
+    public  void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+    public  double getNotaRec() {
+        return notaRec;
+    }
+    public  void setNotaRec(double notaRec) {
+        this.notaRec = notaRec;
+    }
+    public  double getMedia() {
+        media = (nota1+nota2)/2;
+        return media;
+    }
+    public  void setMedia(double media) {
+        this.media = media;
+    }
+    public  double getMediaRec() {
+        if (notaRec>nota1) {
+            nota1=notaRec;
+            mediaRec=(notaRec+nota2)/2;
+        } else {
+            mediaRec=(nota1+notaRec)/2;
+        }
+        return mediaRec;
+    }
+    public  void setMediaRec(double mediaRec) {
+        this.mediaRec = mediaRec;
+    }
     public void setContadorAluguel(int contadorAluguel) {
         this.contadorAluguel = contadorAluguel;
     }
@@ -71,32 +102,49 @@ public class Aluno extends Pessoa {
     public void setNumMatricula(int numMatricula) {
         this.numMatricula = numMatricula;
     }
-    public Disciplina getHistoria() {
-        return historia;
+    public int getQualidadeEnsino() {
+        return qualidadeEnsino;
     }
-    public void setHistoria(Disciplina historia) {
-        this.historia = historia;
+    public void setQualidadeEnsino(int qualidadeEnsino) {
+        this.qualidadeEnsino = qualidadeEnsino;
     }
-    public Disciplina getGeografia() {
-        return geografia;
+    public int getAtencaoAluno() {
+        return atencaoAluno;
     }
-    public void setGeografia(Disciplina geografia) {
-        this.geografia = geografia;
+    public void setAtencaoAluno(int atencaoAluno) {
+        this.atencaoAluno = atencaoAluno;
     }
-    public Disciplina getMatematica() {
-        return matematica;
+    public int getIdAvaliacao() {
+        return idAvaliacao;
     }
-    public void setMatematica(Disciplina matematica) {
-        this.matematica = matematica;
+    public void setIdAvaliacao(int idAvaliacao) {
+        this.idAvaliacao = idAvaliacao;
     }
-    public class Builder {
-
-		public Object nome(String string) {
-			// TODO Auto-generated method stub
-			throw new UnsupportedOperationException("Unimplemented method 'nome'");
-		}
-
+    public String getComentario() {
+        return comentario;
     }
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+    public int getMetodoDidatico() {
+        return metodoDidatico;
+    }
+    public void setMetodoDidatico(int metodoDidatico) {
+        this.metodoDidatico = metodoDidatico;
+    }
+    public int getCarisma() {
+        return carisma;
+    }
+    public void setCarisma(int carisma) {
+        this.carisma = carisma;
+    }
+    public String getComentarioProf() {
+        return comentarioProf;
+    }
+    public void setComentarioProf(String comentarioProf) {
+        this.comentarioProf = comentarioProf;
+    }
+    
 }
 
 //Menu Aluno:

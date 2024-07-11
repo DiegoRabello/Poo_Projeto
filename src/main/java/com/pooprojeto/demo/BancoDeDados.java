@@ -3,22 +3,29 @@ package com.pooprojeto.demo;
 import java.util.ArrayList;
 
 public class BancoDeDados {
-
+    
     public static ArrayList<Aluno> listaDeAlunos = new ArrayList<>();
     private static ArrayList<Professor> listaDeProfessores = new ArrayList<>();
+    private static ArrayList<Professor> listaDeConceitosProfessor = new ArrayList<>();
     private static ArrayList<Turma> listaDeTurmas = new ArrayList<>();
     private static ArrayList<Disciplina> listaDeDisciplinas = new ArrayList<>();
     private static ArrayList<TurmaDisciplina> listaDeTurmaDisciplinas = new ArrayList<>();
     private static ArrayList<LancamentoNota> listaDeLancamentoNota = new ArrayList<>();
-
+    
     public static ArrayList<Aluno> getListaDeAlunos() {
         return listaDeAlunos;
     }
-
+    
     public static void setListaDeAlunos(ArrayList<Aluno> listaDeAlunos) {
         BancoDeDados.listaDeAlunos = listaDeAlunos;
     }
-
+    public static ArrayList<Professor> getListaDeConceitosProfessor() {
+        return listaDeConceitosProfessor;
+    }
+    
+    public static void setListaDeConceitosProfessor(ArrayList<Professor> listaDeConceitosProfessor) {
+        BancoDeDados.listaDeConceitosProfessor = listaDeConceitosProfessor;
+    }
     public static ArrayList<Professor> getListaDeProfessores() {
         return listaDeProfessores;
     }
@@ -60,7 +67,10 @@ public class BancoDeDados {
     }
 
     // Função para adicionar na lista;
-
+    
+    public static void adicionarConceitoProfessor(Professor professor,int conceito) {
+        listaDeConceitosProfessor.add(professor);
+    }
     public static void adicionarAluno(Aluno aluno) {
         listaDeAlunos.add(aluno);
     }
@@ -86,7 +96,9 @@ public class BancoDeDados {
     }
 
     // Funções para remover algo das listas
-
+    public static void removerConceitoProfessor(Professor professor) {
+        listaDeConceitosProfessor.remove(professor);
+    }
     public static void removerAluno(Aluno aluno) {
         listaDeAlunos.remove(aluno);
     }
@@ -165,6 +177,7 @@ public class BancoDeDados {
             }
         }
     }
+
 
     // alunos*, professores*, turma*, disciplina*, turmadisciplina* e nota*;
 }

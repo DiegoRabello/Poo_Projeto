@@ -6,6 +6,15 @@ public class Professor extends Funcionario {
 
     private static int contador = 1;
     private int idProfessor;
+    private int metodoDidatico;
+
+    public int getMetodoDidatico() {
+        return metodoDidatico;
+    }
+
+    public void setMetodoDidatico(int metodoDidatico) {
+        this.metodoDidatico = metodoDidatico;
+    }
 
     public Professor(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login,
             String senha, Endereco endereco, double salario) {
