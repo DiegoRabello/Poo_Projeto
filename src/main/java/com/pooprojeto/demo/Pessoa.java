@@ -20,6 +20,14 @@ public class Pessoa {
     private String senha;
     private Endereco endereco;
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public Pessoa(String nome) {
         this.nome = nome;
     }

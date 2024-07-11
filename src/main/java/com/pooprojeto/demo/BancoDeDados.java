@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BancoDeDados {
 
-    private static ArrayList<Aluno> listaDeAlunos = new ArrayList<>();
+    public static ArrayList<Aluno> listaDeAlunos = new ArrayList<>();
     private static ArrayList<Professor> listaDeProfessores = new ArrayList<>();
     private static ArrayList<Turma> listaDeTurmas = new ArrayList<>();
     private static ArrayList<Disciplina> listaDeDisciplinas = new ArrayList<>();
@@ -76,7 +76,7 @@ public class BancoDeDados {
     public static void adicionarDisciplina(Disciplina disciplina) {
         listaDeDisciplinas.add(disciplina);
     }
-
+    // Excluir
     public static void lancarNota(LancamentoNota lancamentoNota) {
         listaDeLancamentoNota.add(lancamentoNota);
     }
