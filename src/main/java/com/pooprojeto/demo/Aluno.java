@@ -4,9 +4,7 @@ import java.util.Scanner;
 import java.time.LocalDate;
 
 public class Aluno extends Pessoa {
-    Scanner scanner = new Scanner(System.in);
-    LancamentoNota nota =new LancamentoNota();
-    
+
     //Atributos
 
     private static int contador=1;
@@ -14,6 +12,9 @@ public class Aluno extends Pessoa {
     private int idAluno;
     private int contadorAluguel=0;
     private int numMatricula;
+    private Disciplina historia;
+    private Disciplina geografia;
+    private Disciplina matematica;
 
     
     
@@ -42,6 +43,43 @@ public class Aluno extends Pessoa {
     public Aluno(String nome) {
         super(nome);
     }
+    public static int getContador() {
+        return contador;
+    }
+    public static void setContador(int contador) {
+        Aluno.contador = contador;
+    }
+    public int getIdAluno() {
+        return idAluno;
+    }
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
+    }
+    public int getNumMatricula() {
+        return numMatricula;
+    }
+    public void setNumMatricula(int numMatricula) {
+        this.numMatricula = numMatricula;
+    }
+    public Disciplina getHistoria() {
+        return historia;
+    }
+    public void setHistoria(Disciplina historia) {
+        this.historia = historia;
+    }
+    public Disciplina getGeografia() {
+        return geografia;
+    }
+    public void setGeografia(Disciplina geografia) {
+        this.geografia = geografia;
+    }
+    public Disciplina getMatematica() {
+        return matematica;
+    }
+    public void setMatematica(Disciplina matematica) {
+        this.matematica = matematica;
+    }
+
     // public void alugarLivro() {
     //     //continuar
     //     if (contadorAluguel==0) {
@@ -51,14 +89,7 @@ public class Aluno extends Pessoa {
     //         System.out.println("Você ja tem um Aluguel em aberto");
     //     }    
     // }
-    public Disciplina[] getDisciplinas() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDisciplinas'");
-    }
-    public Avaliacao[] Avaliacao() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Avaliacao'");
-    }
+    
     
     // public void devolverLivro() {
     //     //continuar Depois

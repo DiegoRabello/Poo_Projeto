@@ -6,7 +6,6 @@ public class Menu {
     
 
     public void verificarNota() {
-        Scanner scanner = new Scanner(System.in);
         BancoDeDados bc = new BancoDeDados();
         System.out.println("Selecione o aluno:");
         for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
@@ -111,33 +110,34 @@ public class Menu {
     }
     //====== professor =======
     public void lancarNota () {
-        Scanner scanner = new Scanner(System.in);
         BancoDeDados bc = new BancoDeDados(); // assuming BancoDeDados is a class that holds the list of students
         System.out.println("Selecione o aluno:");
-        for (int i = 0; i < bc.getListaDeAlunos().size(); i++) {
-            System.out.println((i + 1) + ". " + bc.getListaDeAlunos().get(i).getNome());
+        for (int i = 0; i < BancoDeDados.getListaDeAlunos().size(); i++) {
+            System.out.println((i + 1) + ". " + BancoDeDados.getListaDeAlunos().get(i).getNome());
         }
         int alunoIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
-        Aluno aluno = bc.getListaDeAlunos().get(alunoIndex);
+        Aluno aluno = BancoDeDados.getListaDeAlunos().get(alunoIndex);
     
         System.out.println("Selecione a disciplina:");
-        for (int i = 0; i < bc.getListaDeDisciplinas().size(); i++) {
-            System.out.println((i + 1) + ". " + bc.getListaDeDisciplinas().get(i).getNome());
-        }
-        int disciplinaIndex = scanner.nextInt() - 1; // subtract 1 because array indices start at 0
-        Disciplina disciplina = bc.getListaDeDisciplinas().get(disciplinaIndex);
-    
+        
+        //Menu de selecao
+        System.out.println(aluno.getGeografia());
+        System.out.println(aluno.getHistoria());
+        System.out.println(aluno.getMatematica());
+
+        Disciplina disciplinaSelecionada = aluno.getGeografia();
+
         System.out.println("Digite a nota 1:");
         double nota1 = scanner.nextDouble();
-        disciplina.setNota1(nota1);
+        disciplinaSelecionada.setNota1(nota1);
     
         System.out.println("Digite a nota 2:");
         double nota2 = scanner.nextDouble();
-        disciplina.setNota2(nota2);
+        disciplinaSelecionada.setNota2(nota2);
     
         System.out.println("Digite a nota de recuperação (ou 0 se não houver):");
         double notaRec = scanner.nextDouble();
-        disciplina.setNotaRec(notaRec);
+        disciplinaSelecionada.setNotaRec(notaRec);
     
         System.out.println("Nota lançada com sucesso!");
         scanner.close();

@@ -12,10 +12,31 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+
+        // Grupo de acoes pra alimentar minhas listas
+        BancoDeDados.listaDeAlunos.add(new Aluno(
+            "João", 
+            LocalDate.of(2000, 1, 1),
+            "123.456.789-00",
+            "joao@email.com", 
+            "1234-5678",
+            "joao",
+            "1234",
+            new Endereco(12345123),
+            123456
+            ));
+
+        
+
+
+
+        
+
+        // Menu
 		
-        System.out.println("Digite o nome do aluno");
-        Scanner sc = new Scanner(System.in);
-        String nome = sc.nextLine();
+        // System.out.println("Digite o nome do aluno");
+        // Scanner sc = new Scanner(System.in);
+        // String nome = sc.nextLine();
        
        
 
