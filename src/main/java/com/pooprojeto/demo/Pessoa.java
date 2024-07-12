@@ -20,20 +20,23 @@ public class Pessoa {
     private String telefone;
     private String login;
     private String senha;
+    
+    
+    
     private Endereco endereco;
-
+    
     public Endereco getEndereco() {
         return endereco;
     }
-
+    
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
+    
     public Pessoa(String nome) {
         this.nome = nome;
     }
-
+    
     //construtores
     public Pessoa(String nome, String cpf, String email, String telefone, String login, String senha, Endereco endereco) {
         this.nome = nome;
@@ -46,7 +49,7 @@ public class Pessoa {
         idpessoa = contador;
         contador++;
     }
-
+    
     public Pessoa(String nome, String cpf, String email, String telefone, String login, String senha) {
         this.nome = nome;
         this.cpf = cpf;
@@ -57,92 +60,109 @@ public class Pessoa {
         idpessoa = contador;
         contador++;
     }
-
+    
     public Pessoa(LocalDate dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
-
+    
     public boolean autentica(String login, String senha) {
         return this.login.equals(login) && this.senha.equals(senha);
     }
-
+    
     public void idade() {
         LocalDate currentDate = LocalDate.now();
         Period age = Period.between(dtNascimento, currentDate);
         System.out.println("Sua idade é " + age.getYears());
     }
-
+    
     // Getters and Setters
     public int getIdpessoa() {
         return idpessoa;
     }
-
+    
     public String getNome() {
         return nome;
     }
-
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    
     public LocalDate getDtNascimento() {
         return dtNascimento;
     }
-
+    
     public void setDtNascimento(LocalDate dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
-
+    
     public String getCpf() {
         return cpf;
     }
-
+    
     public void setCpf(String cpf) {
         if (cpf.length() == 11) {
             this.cpf = cpf;
         }
     }
-
+    
     public String getRg() {
         return rg;
     }
-
+    
     public void setRg(String rg) {
         if (rg.length() == 9) {
             this.rg = rg;
         }
     }
-
+    
     public String getEmail() {
         return email;
     }
-
+    
     public void setEmail(String email) {
         this.email = email;
     }
-
+    
     public String getTelefone() {
         return telefone;
     }
-
+    
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
-    public String getLogin() {
+    
+    public  String getLogin() {
         return login;
     }
-
-    public void setLogin(String login) {
+    
+    public  void setLogin(String login) {
         this.login = login;
     }
-
-    public String getSenha() {
+    
+    public  String getSenha() {
         return senha;
     }
-
-    public void setSenha(String senha) {
+    
+    public  void setSenha(String senha) {
         this.senha = senha;
+    }
+    
+    
+    public static void auntentica(String login, String senha) {
+        for(Professor professor : Professor.getProfessores()) {
+            if (professor.getLogin().equals(login) && professor.getSenha().equals(senha)) {
+                Menu.menuProfessor();
+                break;
+            }  
+            for (Aluno aluno : Aluno.getAlunos()) {
+                if (aluno.getLogin().equals(login)&& aluno.getSenha().equals(senha)) {
+                    Menu.menuAluno(aluno);
+                  break;
+                }
+                System.out.println(" Login ou Senha Incorretos! ");
+            }
+        }
     }
 }
 
