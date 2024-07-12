@@ -33,15 +33,25 @@ public class Pessoa {
     }
 
     //construtores
-    public Pessoa(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login, String senha, Endereco endereco) {
+    public Pessoa(String nome, String cpf, String email, String telefone, String login, String senha, Endereco endereco) {
         this.nome = nome;
-        this.dtNascimento = dtNascimento;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
         this.login = login;
         this.senha = senha;
         this.endereco = endereco;
+        idpessoa = contador;
+        contador++;
+    }
+
+    public Pessoa(String nome, String cpf, String email, String telefone, String login, String senha) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.telefone = telefone;
+        this.login = login;
+        this.senha = senha;
         idpessoa = contador;
         contador++;
     }

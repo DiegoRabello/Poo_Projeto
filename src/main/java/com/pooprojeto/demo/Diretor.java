@@ -8,8 +8,8 @@ public class Diretor extends Funcionario{
     private int idDiretor;
     
     
-    public Diretor(String nome, LocalDate dtNascimento, String cpf, String email, String telefone, String login, String senha, Endereco endereco, double salario) {
-        super(nome, dtNascimento, cpf, email, telefone, login, senha, endereco,salario);
+    public Diretor(String nome, String cpf, String email, String telefone, String login, String senha, Endereco endereco, double salario) {
+        super(nome,cpf, email, telefone, login, senha, endereco,salario);
         this.idDiretor = contador;
         contador++;
     }

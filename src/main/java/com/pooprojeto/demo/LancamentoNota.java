@@ -3,119 +3,59 @@ package com.pooprojeto.demo;
 import java.util.ArrayList;
 
 public class LancamentoNota {
+    // Atributos Estáticos
+    private static ArrayList<LancamentoNota> lancamentoNotas = new ArrayList<LancamentoNota>();
+    private static int contadorLancamentoNota = 0;
 
-    // private static int contadorLancamentoNota = 1;
-    // private int lancamentoNotaID;
-    // private TurmaDisciplina turmaDisciplina;
-    // private Professor professor;
-    // private Aluno aluno;
-    // // private double nota1, nota2, notaRec;
-    // // private double media = nota1+ nota2;
-    // private Disciplina disciplina;
-
-    // constructor
-   
-    // Aluno aluno, Disciplina disciplina,
-    // public LancamentoNota( Disciplina nota) {
-    //     // this.aluno = aluno;
-    //     // this.disciplina = disciplina;
-    //     this.disciplina=nota;
-    //     lancamentoNotaID = contadorLancamentoNota;
-    //     contadorLancamentoNota++;
-    // }
-
-    // public Object getAluno() {
-    //     // TODO Auto-generated method stub
-    //     throw new UnsupportedOperationException("Unimplemented method 'getAluno'");
-    // }
-
-    // setters
-    // public void setNota1(double nota1) {
-    //     this.nota1 = nota1;
-    // }
-
-    // public void setNota2(double nota2) {
-    //     this.nota2 = nota2;
-    // }
-
-    // public void setNotaRec(double notaRec) {
-    //     this.notaRec = notaRec;
-    // }
-
-    // public void setMedia(double media) {
-    //     this.media = media;
-    // }
-    // // getters
-    // public double getNota1() {
-    //     return nota1;
-    // }
-
-    // public double getNota2() {
-    //     return nota2;
-    // }
-
-    // public double getNotaRec() {
-    //     return notaRec;
-    // }
-    // public double getMedia(){
-    //     return media;
-    // }
-
-    // public boolean aprovadoOuNao(){
-    //     return this.media >= 6.0;
-    // }
-
-
-    // public boolean recuperacao(){
-    //     return this.notaRec >= 6;
-    // }
-    // public void verificarNota() {
-
-    //     System.out.println("========== Verificador de Notas =========");
-    //     System.out.println("Sua Nota do Teste é : "+this.getNota1());  
-    //     System.out.println("Sua Nota da Prova é : "+this.getNota2()); 
-    //     System.out.println("Sua Nota da Recuperação é: "+this.getNotaRec()); 
-    //     System.out.println("========================================="); 
-          
-    // }
-
-    // public boolean recuperacao(){
-    //     return this.notaRec >= 6;
-    // 
-
-
+    // Atributos 
+    private int lancamentoNotaID;
     private Aluno aluno;
+    private double nota1, nota2, notaRec;
     private Disciplina disciplina;
-    private double nota;
 
-    public LancamentoNota(Aluno aluno, Disciplina disciplina, double nota) {
+    // Construtor
+    public LancamentoNota(Aluno aluno, Disciplina disciplina) {
+        this.lancamentoNotaID = contadorLancamentoNota++;
         this.aluno = aluno;
         this.disciplina = disciplina;
-        this.nota = nota;
+        lancamentoNotas.add(this);
     }
 
-    // Getters e setters (se necessário)
+    public LancamentoNota(Aluno aluno, Disciplina disciplina, double nota1, double nota2, double notaRec) {
+        this.lancamentoNotaID = contadorLancamentoNota++;
+        this.aluno = aluno;
+        this.disciplina = disciplina;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.notaRec = notaRec;
+        lancamentoNotas.add(this);
+    }
+
+    public static ArrayList<LancamentoNota> getLancamentoNotas() {
+        return lancamentoNotas;
+    }
+    public static int getContadorLancamentoNota() {
+        return contadorLancamentoNota;
+    }
+    public int getLancamentoNotaID() {
+        return lancamentoNotaID;
+    }
     public Aluno getAluno() {
         return aluno;
     }
-
-    public void setAluno(Aluno aluno) {
-        this.aluno = aluno;
+    public double getNota1() {
+        return nota1;
     }
-
+    public double getNota2() {
+        return nota2;
+    }
+    public double getNotaRec() {
+        return notaRec;
+    }
     public Disciplina getDisciplina() {
         return disciplina;
     }
 
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
-    }
-
-    public double getNota() {
-        return nota;
-    }
-
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
 }
+
+    

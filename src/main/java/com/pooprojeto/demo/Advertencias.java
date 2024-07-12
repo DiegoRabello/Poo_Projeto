@@ -32,5 +32,6 @@ public class Advertencias {
         this.idAdvertencias = contador;
         contador++;
     }
+    
 
 }

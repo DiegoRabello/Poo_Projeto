@@ -3,7 +3,7 @@ package com.pooprojeto.demo;
 public class Avaliacao {
 
     // private static int contador = 1;
-    // private int infraestrutura;
+    private int infraestrutura;
     // private int qualidadeEnsino; //Avaliar Escola
     // private int atencaoAluno;//Avaliar Escola
     // private int idAvaliacao;
@@ -42,12 +42,12 @@ public class Avaliacao {
     // public void setQualidadeEnsino(int qualidadeEnsino) {
     //     this.qualidadeEnsino = qualidadeEnsino;
     // }
-    // public int getInfraestrutura() {
-    //     return infraestrutura;
-    // }
-    // public void setInfraestrutura(int infraestrutura) {
-    //     this.infraestrutura = infraestrutura;
-    // }
+    public int getInfraestrutura() {
+        return infraestrutura;
+    }
+    public void setInfraestrutura(int infraestrutura) {
+        this.infraestrutura = infraestrutura;
+    }
     // public int getIdAvaliacao(){
     //     return idAvaliacao;
     // }
