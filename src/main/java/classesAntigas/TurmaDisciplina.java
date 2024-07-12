@@ -1,4 +1,8 @@
-package com.pooprojeto.demo;
+package classesAntigas;
+
+import com.pooprojeto.demo.Aluno;
+import com.pooprojeto.demo.Disciplina;
+import com.pooprojeto.demo.Professor;
 
 public class TurmaDisciplina {
 

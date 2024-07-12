@@ -5,6 +5,8 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 import org.springframework.cglib.core.Local;
+
+import classesAntigas.Endereco;
 public class Pessoa {
     //atributos
     private static int contador = 1;

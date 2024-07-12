@@ -1,4 +1,4 @@
-package com.pooprojeto.demo;
+package classesAntigas;
 
 public class Advertencias {
 

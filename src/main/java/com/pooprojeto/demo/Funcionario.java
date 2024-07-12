@@ -1,5 +1,7 @@
 package com.pooprojeto.demo;
 
+import classesAntigas.Endereco;
+
 abstract class Funcionario extends Pessoa {
 
     private double salario;
