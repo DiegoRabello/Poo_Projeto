@@ -97,6 +97,8 @@ public class Professor extends Funcionario {
 
     public static void lancarNota() {
         int escolhaLancamentoNota;
+        double escolhaNovaNota;
+
         // Lançar notas dos alunos de uma turma ou disciplina.
         System.out.println("Selecione um aluno para lançar a nota: ");
         Aluno.listarAlunos();
@@ -132,23 +134,141 @@ public class Professor extends Funcionario {
             // Identificar se existe algum LancamentoNota para o aluno e disciplina
 
             for (int i = 0; i < LancamentoNota.getLancamentoNotas().size(); i++) {
-                if(LancamentoNota.getLancamentoNotas().get(i).getAluno().equals(aluno)
-                    && 
-                    LancamentoNota.getLancamentoNotas().get(i).getDisciplina().equals(disciplina))
-                {
-                    if(LancamentoNota.getLancamentoNotas().get(i).getNota1() != 0)
-                    {
-                        System.out.println("Nota já lançada para o aluno " + aluno.getNome());
+                // Identifica se o aluno de LancamentoNota é igual o objeto Aluno e da mesma
+                // disciplina
+                if (LancamentoNota.getLancamentoNotas().get(i).getAluno().equals(aluno)
+                        &&
+                        LancamentoNota.getLancamentoNotas().get(i).getDisciplina().equals(disciplina)) {
+                    // Ver se existe algum lancamento de nota1 para o Aluno desejado
+                    if (LancamentoNota.getLancamentoNotas().get(i).getNota1() != 0) {
+                        System.out.println("Nota já lançada para o aluno " + aluno.getNome() + " Nota 1 = "
+                                + LancamentoNota.getLancamentoNotas().get(i).getNota1());
+                        System.out.println("""
+                                Deseja alterar a nota?
+                                1 - Sim
+                                2 - Não
+                                """);
+
+                        escolhaLancamentoNota = scanner.nextInt();
+
+                        if (escolhaLancamentoNota == 1) {
+                            System.out.println("Qual a nova nota 1 do aluno: ");
+                            escolhaNovaNota = scanner.nextDouble();
+
+                            LancamentoNota.getLancamentoNotas().get(i).setNota1(escolhaNovaNota);
+                            System.out.println("Nova nota adicionada.");
+                            return;
+
+                        } else if (escolhaLancamentoNota == 2) {
+                            return;
+                        } else {
+                            System.out.println("Escolha invalida.");
+                        }
                         return;
                     } else {
-                        //MenuLancamentoDeNota();
+                        System.out.println("Nota não lançada para o aluno " + aluno.getNome());
+                        System.out.println("Insira a nota 1: ");
+                        escolhaNovaNota = scanner.nextDouble();
+
+                        LancamentoNota.getLancamentoNotas().get(i).setNota1(escolhaNovaNota);
+                        System.out.println("Nova nota adicionada.");
+                        return;
                     }
-                };
+                }
             }
+            // Lancamento Nota 2
         } else if (escolhaLancamentoNota == 2) {
+            // Identificar se existe algum LancamentoNota para o aluno e disciplina
 
+            for (int i = 0; i < LancamentoNota.getLancamentoNotas().size(); i++) {
+                // Identifica se o aluno de LancamentoNota é igual o objeto Aluno e da mesma
+                // disciplina
+                if (LancamentoNota.getLancamentoNotas().get(i).getAluno().equals(aluno)
+                        &&
+                        LancamentoNota.getLancamentoNotas().get(i).getDisciplina().equals(disciplina)) {
+                    // Ver se existe algum lancamento de nota1 para o Aluno desejado
+                    if (LancamentoNota.getLancamentoNotas().get(i).getNota1() != 0) {
+                        System.out.println("Nota já lançada para o aluno " + aluno.getNome() + " Nota 2 = "
+                                + LancamentoNota.getLancamentoNotas().get(i).getNota2());
+                        System.out.println("""
+                                Deseja alterar a nota?
+                                1 - Sim
+                                2 - Não
+                                """);
+
+                        escolhaLancamentoNota = scanner.nextInt();
+
+                        if (escolhaLancamentoNota == 1) {
+                            System.out.println("Qual a nova nota 1 do aluno: ");
+                            escolhaNovaNota = scanner.nextDouble();
+
+                            LancamentoNota.getLancamentoNotas().get(i).setNota2(escolhaNovaNota);
+                            System.out.println("Nova nota adicionada.");
+                            return;
+
+                        } else if (escolhaLancamentoNota == 2) {
+                            return;
+                        } else {
+                            System.out.println("Escolha invalida.");
+                        }
+                        return;
+                    } else {
+                        System.out.println("Nota não lançada para o aluno " + aluno.getNome());
+                        System.out.println("Insira a nota 2: ");
+                        escolhaNovaNota = scanner.nextDouble();
+
+                        LancamentoNota.getLancamentoNotas().get(i).setNota2(escolhaNovaNota);
+                        System.out.println("Nova nota adicionada.");
+                        return;
+                    }
+                }
+            }
         } else if (escolhaLancamentoNota == 3) {
+            // Identificar se existe algum LancamentoNota para o aluno e disciplina
 
+            for (int i = 0; i < LancamentoNota.getLancamentoNotas().size(); i++) {
+                // Identifica se o aluno de LancamentoNota é igual o objeto Aluno e da mesma
+                // disciplina
+                if (LancamentoNota.getLancamentoNotas().get(i).getAluno().equals(aluno)
+                        &&
+                        LancamentoNota.getLancamentoNotas().get(i).getDisciplina().equals(disciplina)) {
+                    // Ver se existe algum lancamento de notaRec para o Aluno desejado
+                    if (LancamentoNota.getLancamentoNotas().get(i).getNotaRec() != 0) {
+                        System.out.println("Nota já lançada para o aluno " + aluno.getNome() + " Nota de Recuperação = "
+                                + LancamentoNota.getLancamentoNotas().get(i).getNotaRec());
+                        System.out.println("""
+                                Deseja alterar a nota?
+                                1 - Sim
+                                2 - Não
+                                """);
+
+                        escolhaLancamentoNota = scanner.nextInt();
+
+                        if (escolhaLancamentoNota == 1) {
+                            System.out.println("Qual a nova nota 1 do aluno: ");
+                            escolhaNovaNota = scanner.nextDouble();
+
+                            LancamentoNota.getLancamentoNotas().get(i).setNotaRec(escolhaNovaNota);
+                            System.out.println("Nova nota adicionada.");
+                            return;
+
+                        } else if (escolhaLancamentoNota == 2) {
+                            return;
+                        } else {
+                            System.out.println("Escolha invalida.");
+                        }
+                        return;
+                    } else {
+                        System.out.println("Nota não lançada para o aluno " + aluno.getNome());
+                        System.out.println("Insira a nota Rec: ");
+                        escolhaNovaNota = scanner.nextDouble();
+
+                        LancamentoNota.getLancamentoNotas().get(i).setNotaRec(escolhaNovaNota);
+                        System.out.println("Nova nota adicionada.");
+                        return;
+                    }
+                }
+            }
         } else {
             System.out.println("Função inválida.");
             lancarNota();
