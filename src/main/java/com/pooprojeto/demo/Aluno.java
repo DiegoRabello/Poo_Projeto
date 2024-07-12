@@ -2,6 +2,8 @@ package com.pooprojeto.demo;
 
 import java.util.ArrayList;
 
+import classesAntigas.Endereco;
+
 public class Aluno extends Pessoa {
     // Atributos Estáticos
     private static ArrayList<Aluno> alunos = new ArrayList<Aluno>();

@@ -3,6 +3,8 @@ package com.pooprojeto.demo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import classesAntigas.Endereco;
+
 public class Professor extends Funcionario {
     // Atributos Estáticos
     private static ArrayList<Professor> professores = new ArrayList<Professor>();
