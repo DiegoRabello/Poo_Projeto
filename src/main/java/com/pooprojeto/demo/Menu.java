@@ -1,7 +1,6 @@
 package com.pooprojeto.demo;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -20,29 +19,26 @@ public class Menu {
     }
 
     public static void menuPrincipal() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
         System.out.println(" === Bem vindo ao Sistema Escolar ===");
         System.out.println(" 1 - Menu Aluno");
         System.out.println(" 2 - Menu Professor");
         System.out.println(" 3 - Menu Diretor");
         System.out.println(" 0 - Sair");
         System.out.println("Escolha uma opção: ");
-        int escolha = scanner.nextInt();
+        int escolhaPrincipal = sc1.nextInt();
         boolean menuAtivado = true;
 
         limpaConsole();
-        scanner.close();
 
         while (menuAtivado) {
 
-            switch (escolha) {
+            switch (escolhaPrincipal) {
                 case 1:
                     // Depois de criar o método de autenticação substituir pelo menuAluno()
-                    limpaConsole();
                     selecionaAluno();
                     break;
                 case 2:
-                    limpaConsole();
                     menuProfessor();
                     break;
                 // case 3:
@@ -50,13 +46,10 @@ public class Menu {
                 // break;
                 case 0:
                     System.out.println("Saindo...");
-                    limpaConsole();
                     menuAtivado = false;
                     break;
                 default:
                     System.out.println("Opção inválida.");
-                    limpaConsole();
-                    menuPrincipal();
                     break;
             }
         }
@@ -112,18 +105,17 @@ public class Menu {
     }
 
     public static void menuProfessor() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
         System.out.println("1. Lançar Notas");
         // System.out.println("2. Verificar Avaliação dos Professores");
         System.out.println("0. Voltar");
         System.out.print("Escolha uma opção: ");
-        int escolha = scanner.nextInt();
-        scanner.close();
-        switch (escolha) {
+        int escolhaProfessor = sc2.nextInt();
+        switch (escolhaProfessor) {
             case 1:
                 Professor.lancarNota();
                 menuPrincipal();
-                // break;
+                break;
                 // case 2:
                 // Professor.verificarAvaliacaoProfessor();
                 // break;

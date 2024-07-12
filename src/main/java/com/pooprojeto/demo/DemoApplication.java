@@ -12,10 +12,10 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
 
-        limpaConsole();
+        Menu.limpaConsole();
 
         alimentaBancoDeDados();
-        Professor.listarProfessores();
+        Menu.menuPrincipal();
         // O que vou ter no meu menu principal?
 
         // 1. Alunos > Consulta de Boletim
@@ -79,11 +79,11 @@ public class DemoApplication {
     // System.out.println((i + 1) + ". " + f.getNome());
     // }
 
-    
 
     public static void alimentaBancoDeDados() {
         Aluno.alimentaBancoAlunos();
         Professor.alimentaBancoProfessores();
         Disciplina.alimentaBancoDisciplinas();
+        LancamentoNota.alimentaLancamentoNotas();
     }
 }

@@ -10,15 +10,15 @@ public class Professor extends Funcionario {
     private static ArrayList<Professor> professores = new ArrayList<Professor>();
 
     // Construtores
-    public Professor(String nome,  String cpf, String email, String telefone, String login,
+    public Professor(String nome, String cpf, String email, String telefone, String login,
             String senha, double salario) {
         super(nome, cpf, email, telefone, login, senha, salario);
         professores.add(this);
     }
 
-    public Professor(String nome,  String cpf, String email, String telefone, String login,
-            String senha, Endereco endereco,double salario) {
-        super(nome, cpf, email, telefone, login, senha, endereco,salario);
+    public Professor(String nome, String cpf, String email, String telefone, String login,
+            String senha, Endereco endereco, double salario) {
+        super(nome, cpf, email, telefone, login, senha, endereco, salario);
         professores.add(this);
     }
 
@@ -96,6 +96,7 @@ public class Professor extends Funcionario {
     }
 
     public static void lancarNota() {
+        int escolhaLancamentoNota;
         // Lançar notas dos alunos de uma turma ou disciplina.
         System.out.println("Selecione um aluno para lançar a nota: ");
         Aluno.listarAlunos();
@@ -110,17 +111,51 @@ public class Professor extends Funcionario {
         int disciplinaIndex = scanner.nextInt() - 1;
         Disciplina disciplina = Disciplina.getDisciplinas().get(disciplinaIndex);
 
-        System.out.print("Digite a nota 1 do aluno: ");
-        double nota1 = scanner.nextDouble();
+        // System.out.print("Digite a nota 1 do aluno: ");
+        // double nota1 = scanner.nextDouble();
 
-        System.out.print("Digite a nota 2 do aluno: ");
-        double nota2 = scanner.nextDouble();
+        // System.out.print("Digite a nota 2 do aluno: ");
+        // double nota2 = scanner.nextDouble();
 
-        System.out.print("Digite a nota rec do aluno: ");
-        double nota3 = scanner.nextDouble();
+        // System.out.print("Digite a nota rec do aluno: ");
+        // double nota3 = scanner.nextDouble();
 
-        LancamentoNota lancamentoNota = new LancamentoNota(aluno, disciplina, nota1, nota2, nota3);
+        System.out.println("Qual nota deseja incluir do Aluno " + aluno.getNome());
+        System.out.println("""
+                1 - Nota 1.
+                2 - Nota 2.
+                3 - Nota de Recuperação.
+                """);
+        escolhaLancamentoNota = scanner.nextInt();
+
+        if (escolhaLancamentoNota == 1) {
+            // Identificar se existe algum LancamentoNota para o aluno e disciplina
+
+            for (int i = 0; i < LancamentoNota.getLancamentoNotas().size(); i++) {
+                if(LancamentoNota.getLancamentoNotas().get(i).getAluno().equals(aluno)
+                    && 
+                    LancamentoNota.getLancamentoNotas().get(i).getDisciplina().equals(disciplina))
+                {
+                    if(LancamentoNota.getLancamentoNotas().get(i).getNota1() != 0)
+                    {
+                        System.out.println("Nota já lançada para o aluno " + aluno.getNome());
+                        return;
+                    } else {
+                        //MenuLancamentoDeNota();
+                    }
+                };
+            }
+        } else if (escolhaLancamentoNota == 2) {
+
+        } else if (escolhaLancamentoNota == 3) {
+
+        } else {
+            System.out.println("Função inválida.");
+            lancarNota();
+        }
+
     }
+
     public static void listarProfessores() {
         for (int i = 0; i < Professor.getProfessores().size(); i++) {
             System.out.println((i + 1) + ". " + Professor.getProfessores().get(i).getNome());
