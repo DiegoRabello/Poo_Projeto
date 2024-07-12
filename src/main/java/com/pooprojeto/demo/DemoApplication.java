@@ -79,18 +79,7 @@ public class DemoApplication {
     // System.out.println((i + 1) + ". " + f.getNome());
     // }
 
-    public static void limpaConsole() {
-        try {
-            if (System.getProperty("os.name").contains("Windows")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } else {
-                // Para sistemas UNIX-like (Linux, macOS), use o comando "clear"
-                new ProcessBuilder("clear").inheritIO().start().waitFor();
-            }
-        } catch (IOException | InterruptedException ex) {
-            ex.printStackTrace();
-        }
-    }
+    
 
     public static void alimentaBancoDeDados() {
         Aluno.alimentaBancoAlunos();
