@@ -120,8 +120,8 @@ public class Professor extends Funcionario {
         LancamentoNota lancamentoNota = new LancamentoNota(aluno, disciplina, nota1, nota2, nota3);
     }
     public static void listarProfessores() {
-        for (int i = 0; i < Profesores.getProfessores().size(); i++) {
-            System.out.println((i + 1) + ". " + Aluno.getAlunos().get(i).getNome());
+        for (int i = 0; i < Professor.getProfessores().size(); i++) {
+            System.out.println((i + 1) + ". " + Professor.getProfessores().get(i).getNome());
         }
     }
 }

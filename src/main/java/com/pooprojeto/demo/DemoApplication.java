@@ -15,7 +15,7 @@ public class DemoApplication {
         limpaConsole();
 
         alimentaBancoDeDados();
-        Menu.menuPrincipal();
+        Professor.listarProfessores();
         // O que vou ter no meu menu principal?
 
         // 1. Alunos > Consulta de Boletim
