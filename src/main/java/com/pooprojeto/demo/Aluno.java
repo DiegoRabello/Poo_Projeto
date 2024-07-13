@@ -165,5 +165,20 @@ public class Aluno extends Pessoa {
             }
         }
     }
+    public static void calculaMedia(LancamentoNota lancamentoNota) {
 
+        double media;
+
+        media = (lancamentoNota.getNota1() + lancamentoNota.getNota2()) / 2;
+
+        if(media <= 6){
+            if(lancamentoNota.getNota1() < lancamentoNota.getNotaRec()){
+                lancamentoNota.setNota1(lancamentoNota.getNotaRec());
+                media = (lancamentoNota.getNota1() + lancamentoNota.getNota2()) / 2;
+            } else {
+                lancamentoNota.setNota2(lancamentoNota.getNotaRec());
+                media = (lancamentoNota.getNota1() + lancamentoNota.getNota2()) / 2;
+            }
+        }
+    }
 }

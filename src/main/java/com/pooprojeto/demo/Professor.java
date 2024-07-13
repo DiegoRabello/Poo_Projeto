@@ -288,17 +288,17 @@ public class Professor extends Funcionario {
         // String descricao = scanner.next();
         // Advertencias.getAdvertencias().get(alunoIndex).setExplicação(descricao);;
        
-        Scanner scanner = new Scanner(System.in);
-    Aluno.listarAlunos();
-    System.out.println("Qual o aluno que deseja lançar advertência?");
-    int alunoIndex = scanner.nextInt() - 1;
-    Aluno aluno = Aluno.getAlunos().get(alunoIndex);
+    //     Scanner scanner = new Scanner(System.in);
+    // Aluno.listarAlunos();
+    // System.out.println("Qual o aluno que deseja lançar advertência?");
+    // int alunoIndex = scanner.nextInt() - 1;
+    // Aluno aluno = Aluno.getAlunos().get(alunoIndex);
     
-    System.out.println("Digite o Motivo da advertência:");
-    String motivo = scanner.next();
-    Advertencia advertencia = new Advertencia();
-    advertencia.setExplicação(descricao);
-    aluno.getAdvertencia().add(advertencia);
+    // System.out.println("Digite o Motivo da advertência:");
+    // String motivo = scanner.next();
+    // Advertencia advertencia = new Advertencia();
+    // advertencia.setExplicação(descricao);
+    // aluno.getAdvertencia().add(advertencia);
 
 
     }
