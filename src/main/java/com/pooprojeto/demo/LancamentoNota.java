@@ -12,15 +12,15 @@ public class LancamentoNota {
     private Aluno aluno;
     private double nota1, nota2, notaRec;
     private Disciplina disciplina;
-
-    // Construtor
-    public LancamentoNota(Aluno aluno, Disciplina disciplina) {
-        this.lancamentoNotaID = contadorLancamentoNota++;
-        this.aluno = aluno;
-        this.disciplina = disciplina;
-        lancamentoNotas.add(this);
+        
+        // Construtor
+        public LancamentoNota(Aluno aluno, Disciplina disciplina) {
+            this.lancamentoNotaID = contadorLancamentoNota++;
+            this.aluno = aluno;
+            this.disciplina = disciplina;
+            lancamentoNotas.add(this);
     }
-
+    
     public LancamentoNota(Aluno aluno, Disciplina disciplina, double nota1, double nota2, double notaRec) {
         this.lancamentoNotaID = contadorLancamentoNota++;
         this.aluno = aluno;
@@ -55,7 +55,18 @@ public class LancamentoNota {
     public Disciplina getDisciplina() {
         return disciplina;
     }
-
+    public void setNotaRec(double notaRec){
+    this.notaRec = notaRec;
+    }
+    
+    public void setNota2(double nota2) {
+    this.nota2 = nota2;
+    }
+    
+    public void setNota1(double nota1) {
+    this.nota1 = nota1;
+    }
+    
 }
 
     
