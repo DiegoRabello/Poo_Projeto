@@ -1,6 +1,7 @@
 package com.pooprojeto.demo;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.aop.config.AdviceEntry;
@@ -104,15 +105,15 @@ public class Professor extends Funcionario {
         // Lançar notas dos alunos de uma turma ou disciplina.
         System.out.println("Selecione um aluno para lançar a nota: ");
         Aluno.listarAlunos();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner3 = new Scanner(System.in);
         System.out.print("Digite o Número do Aluno: ");
-        int alunoIndex = scanner.nextInt() - 1;
+        int alunoIndex = scanner3.nextInt() - 1;
         Aluno aluno = Aluno.getAlunos().get(alunoIndex);
 
         System.out.println("Selecione a disciplina: ");
         Disciplina.listarDisciplinas();
         System.out.print("Digite o Número da Disciplina: ");
-        int disciplinaIndex = scanner.nextInt() - 1;
+        int disciplinaIndex = scanner3.nextInt() - 1;
         Disciplina disciplina = Disciplina.getDisciplinas().get(disciplinaIndex);
 
         // System.out.print("Digite a nota 1 do aluno: ");
@@ -130,7 +131,7 @@ public class Professor extends Funcionario {
                 2 - Nota 2.
                 3 - Nota de Recuperação.
                 """);
-        escolhaLancamentoNota = scanner.nextInt();
+        escolhaLancamentoNota = scanner3.nextInt();
 
         if (escolhaLancamentoNota == 1) {
             // Identificar se existe algum LancamentoNota para o aluno e disciplina
@@ -151,11 +152,11 @@ public class Professor extends Funcionario {
                                 2 - Não
                                 """);
 
-                        escolhaLancamentoNota = scanner.nextInt();
+                        escolhaLancamentoNota = scanner3.nextInt();
 
                         if (escolhaLancamentoNota == 1) {
                             System.out.println("Qual a nova nota 1 do aluno: ");
-                            escolhaNovaNota = scanner.nextDouble();
+                            escolhaNovaNota = scanner3.nextDouble();
 
                             LancamentoNota.getLancamentoNotas().get(i).setNota1(escolhaNovaNota);
                             System.out.println("Nova nota adicionada.");
@@ -170,7 +171,7 @@ public class Professor extends Funcionario {
                     } else {
                         System.out.println("Nota não lançada para o aluno " + aluno.getNome());
                         System.out.println("Insira a nota 1: ");
-                        escolhaNovaNota = scanner.nextDouble();
+                        escolhaNovaNota = scanner3.nextDouble();
 
                         LancamentoNota.getLancamentoNotas().get(i).setNota1(escolhaNovaNota);
                         System.out.println("Nova nota adicionada.");
@@ -198,11 +199,11 @@ public class Professor extends Funcionario {
                                 2 - Não
                                 """);
 
-                        escolhaLancamentoNota = scanner.nextInt();
+                        escolhaLancamentoNota = scanner3.nextInt();
 
                         if (escolhaLancamentoNota == 1) {
                             System.out.println("Qual a nova nota 1 do aluno: ");
-                            escolhaNovaNota = scanner.nextDouble();
+                            escolhaNovaNota = scanner3.nextDouble();
 
                             LancamentoNota.getLancamentoNotas().get(i).setNota2(escolhaNovaNota);
                             System.out.println("Nova nota adicionada.");
@@ -217,7 +218,7 @@ public class Professor extends Funcionario {
                     } else {
                         System.out.println("Nota não lançada para o aluno " + aluno.getNome());
                         System.out.println("Insira a nota 2: ");
-                        escolhaNovaNota = scanner.nextDouble();
+                        escolhaNovaNota = scanner3.nextDouble();
 
                         LancamentoNota.getLancamentoNotas().get(i).setNota2(escolhaNovaNota);
                         System.out.println("Nova nota adicionada.");
@@ -244,11 +245,11 @@ public class Professor extends Funcionario {
                                 2 - Não
                                 """);
 
-                        escolhaLancamentoNota = scanner.nextInt();
+                        escolhaLancamentoNota = scanner3.nextInt();
 
                         if (escolhaLancamentoNota == 1) {
                             System.out.println("Qual a nova nota 1 do aluno: ");
-                            escolhaNovaNota = scanner.nextDouble();
+                            escolhaNovaNota = scanner3.nextDouble();
 
                             LancamentoNota.getLancamentoNotas().get(i).setNotaRec(escolhaNovaNota);
                             System.out.println("Nova nota adicionada.");
@@ -263,7 +264,7 @@ public class Professor extends Funcionario {
                     } else {
                         System.out.println("Nota não lançada para o aluno " + aluno.getNome());
                         System.out.println("Insira a nota Rec: ");
-                        escolhaNovaNota = scanner.nextDouble();
+                        escolhaNovaNota = scanner3.nextDouble();
 
                         LancamentoNota.getLancamentoNotas().get(i).setNotaRec(escolhaNovaNota);
                         System.out.println("Nova nota adicionada.");
@@ -275,31 +276,6 @@ public class Professor extends Funcionario {
             System.out.println("Função inválida.");
             lancarNota();
         }
-
-    }
-    public static void lancarAdvertencia() {
-        // Scanner scanner = new Scanner(System.in);
-        // Aluno.listarAlunos();
-        // System.out.println("Qual o aluno que deseja lançar advertencia?");
-        // int alunoIndex = scanner.nextInt() -1;
-        // Aluno.getAlunos().get(alunoIndex);
-       
-        // System.out.println("Digite a descrição da advertência:");
-        // String descricao = scanner.next();
-        // Advertencias.getAdvertencias().get(alunoIndex).setExplicação(descricao);;
-       
-    //     Scanner scanner = new Scanner(System.in);
-    // Aluno.listarAlunos();
-    // System.out.println("Qual o aluno que deseja lançar advertência?");
-    // int alunoIndex = scanner.nextInt() - 1;
-    // Aluno aluno = Aluno.getAlunos().get(alunoIndex);
-    
-    // System.out.println("Digite o Motivo da advertência:");
-    // String motivo = scanner.next();
-    // Advertencia advertencia = new Advertencia();
-    // advertencia.setExplicação(descricao);
-    // aluno.getAdvertencia().add(advertencia);
-
 
     }
     public static void listarProfessores() {

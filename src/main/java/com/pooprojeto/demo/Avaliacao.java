@@ -1,8 +1,6 @@
-package classesAntigas;
+package com.pooprojeto.demo;
 
 import java.util.ArrayList;
-
-import com.pooprojeto.demo.Professor;
 
 public class Avaliacao {
     //Atributos Estáticos 

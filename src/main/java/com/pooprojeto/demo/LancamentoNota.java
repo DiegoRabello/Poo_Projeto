@@ -96,6 +96,25 @@ public class LancamentoNota {
             }
         }
         LancamentoNota.getLancamentoNotas().get(0).setNota1(7.0);
+        LancamentoNota.getLancamentoNotas().get(1).setNota1(9.0);
+        LancamentoNota.getLancamentoNotas().get(2).setNota1(10.0);
+        LancamentoNota.getLancamentoNotas().get(3).setNota1(4.0);
+        LancamentoNota.getLancamentoNotas().get(4).setNota1(7.0);
+        LancamentoNota.getLancamentoNotas().get(5).setNota1(6.0);
+        LancamentoNota.getLancamentoNotas().get(6).setNota1(3.0);
+        LancamentoNota.getLancamentoNotas().get(7).setNota1(8.0);
+        LancamentoNota.getLancamentoNotas().get(8).setNota1(8.0);
+        LancamentoNota.getLancamentoNotas().get(9).setNota1(7.0);
+        LancamentoNota.getLancamentoNotas().get(0).setNota2(7.0);
+        LancamentoNota.getLancamentoNotas().get(1).setNota2(9.0);
+        LancamentoNota.getLancamentoNotas().get(2).setNota2(10.0);
+        LancamentoNota.getLancamentoNotas().get(3).setNota2(4.0);
+        LancamentoNota.getLancamentoNotas().get(4).setNota2(7.0);
+        LancamentoNota.getLancamentoNotas().get(5).setNota2(6.0);
+        LancamentoNota.getLancamentoNotas().get(6).setNota2(3.0);
+        LancamentoNota.getLancamentoNotas().get(7).setNota2(8.0);
+        LancamentoNota.getLancamentoNotas().get(8).setNota2(8.0);
+        LancamentoNota.getLancamentoNotas().get(9).setNota2(7.0);
     }
 
 }

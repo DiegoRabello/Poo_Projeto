@@ -1,12 +1,18 @@
 package com.pooprojeto.demo;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import classesAntigas.Endereco;
 
 public class Aluno extends Pessoa {
+    Advertencia advertencia;
+
     // Atributos Estáticos
     private static ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+   
+   
     private static int contador = 0;
 
     // Atributos
@@ -17,6 +23,7 @@ public class Aluno extends Pessoa {
             Endereco endereco) {
         super(nome, cpf, email, telefone, login, senha, endereco);
         this.numMatricula = contador++;
+        this.advertencias = new ArrayList<>();
         alunos.add(this);
     }
 
@@ -43,7 +50,6 @@ public class Aluno extends Pessoa {
     public void setNumMatricula(int numMatricula) {
         this.numMatricula = numMatricula;
     }
-
     // Métodos
     public static void alimentaBancoAlunos() {
         Aluno aluno = new Aluno(
@@ -159,9 +165,10 @@ public class Aluno extends Pessoa {
         for (LancamentoNota lancamentoNota : LancamentoNota.getLancamentoNotas()) {
             if (lancamentoNota.getAluno().equals(aluno)) {
                 System.out.println(lancamentoNota.getDisciplina().getNomeDisciplina());
-                System.out.print("Nota 1: " + lancamentoNota.getNota1() + " / ");
-                System.out.print("Nota 2: " + lancamentoNota.getNota2() + " / ");
-                System.out.print("Nota 3: " + lancamentoNota.getNotaRec() + " / ");
+                System.out.println("\nNota 1: " + lancamentoNota.getNota1());
+                System.out.println("Nota 2: " + lancamentoNota.getNota2());
+                System.out.println("Nota 3: " + lancamentoNota.getNotaRec()+"\n");
+               
             }
         }
     }
@@ -181,4 +188,19 @@ public class Aluno extends Pessoa {
             }
         }
     }
+
+
+
+
+
+    private List<String> advertencias;
+    public void adicionarAdvertencia(String advertencia) {
+        advertencias.add(advertencia);
+    }
+
+    public List<String> listarAdvertencias() {
+        return new ArrayList<>(advertencias);
+    }
+
+
 }
