@@ -41,9 +41,9 @@ public class Menu {
                 case 2:
                     menuProfessor();
                     break;
-                // case 3:
-                // menuDiretor();
-                // break;
+                case 3:
+                    menuDiretor();
+                    break;
                 case 0:
                     System.out.println("Saindo...");
                     menuAtivado = false;
@@ -70,7 +70,7 @@ public class Menu {
 
         Scanner scanner4 = new Scanner(System.in);
         System.out.println("\n1 - Verificar Notas");
-        // System.out.println("2. Avaliar Professor");
+        System.out.println("2. Avaliar Professor");
         System.out.println("0 - Voltar");
         System.out.print("Escolha uma opção: ");
         int escolha ;
@@ -81,7 +81,10 @@ public class Menu {
                 limpaConsole();
                 Aluno.imprimirBoletim(aluno);
                 break;
-       
+            case 2:
+                limpaConsole();
+                Avaliacao.adicionarAvaliacao();
+                break;
             case 0:
                 limpaConsole();
                 menuPrincipal();
@@ -91,13 +94,14 @@ public class Menu {
                 // menuAluno();
                 break;
         }
+        menuPrincipal();
     }
 
     public static void menuProfessor() {
         Scanner sc2 = new Scanner(System.in);
-        System.out.println("1. Lançar Notas");
+        System.out.println("\n1. Lançar Notas");
         System.out.println("2. Lançar Advertência");
-        System.out.println("3.ver ADVERTENCIAS");
+        System.out.println("3. Ver ADVERTENCIAS");
         System.out.println("0. Voltar");
         System.out.print("Escolha uma opção: ");
         int escolhaProfessor = sc2.nextInt();
@@ -130,36 +134,44 @@ public class Menu {
                 menuProfessor();
                 break;
         }
+        menuPrincipal();
     }
 
-    // public static void menuDiretor() {
-    //     Scanner scanner = new Scanner(System.in);
-    //     // System.out.println("1. Verificar avaliações dos Professores");
-    //     // System.out.println("2. Verificar avaliações da Escola");
-    //     // // System.out.println("3. Verificar Alunos com Advertencia");
-    //     // System.out.println("4. Adicionar Professor");
-    //     // System.out.println("5. Adicionar Alunos ");
-    //     // System.out.println("6. Adicionar Turmas");
-    //     System.out.println("0. Voltar");
-    //     System.out.print("Escolha uma opção: ");
-    //     int escolha = scanner.nextInt();
-    //     switch (escolha) {
-    //         case 1:
+    public static void menuDiretor() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1. Verificar avaliações dos Professores");
+        // System.out.println("2. Verificar avaliações da Escola");
+        System.out.println("2. Verificar Alunos com Advertencia");
+        // System.out.println("4. Adicionar Professor");
+        // System.out.println("5. Adicionar Alunos ");
+        // System.out.println("6. Adicionar Turmas");
+        System.out.println("0. Voltar");
+        System.out.print("Escolha uma opção: ");
+        int escolha = scanner.nextInt();
+        switch (escolha) {
+            case 1:
+                limpaConsole();
+                Avaliacao.listarAvaliacao();
+                break;
 
-    //             break;
-    //         case 0:
-                
-    //             break;
-    //         default:
-    //             System.out.println("Opção inválida");
-    //             menuProfessor();
-    //             break;
-    //     }
-        //Menu Gestor:
-        //O gestor pode:
-        //Verificar professores e suas avaliações feitas pelos alunos.
-        //Verificar alunos com advertências.
-        //Verificar avaliações dos alunos quanto à escola.
-        //Adicionar professor, disciplina e alunos a uma turma.
-    // }
+            case 2:
+                limpaConsole();
+                Advertencia.listarAdvertencias();
+                break;
+            case 0:
+                menuPrincipal();
+                break;
+            default:
+                System.out.println("Opção inválida");
+                menuProfessor();
+                break;
+        }
+        menuPrincipal();
+        // Menu Gestor:
+        // O gestor pode:
+        // Verificar professores e suas avaliações feitas pelos alunos.
+        // Verificar alunos com advertências.
+        // Verificar avaliações dos alunos quanto à escola.
+        // Adicionar professor, disciplina e alunos a uma turma.
+    }
 }

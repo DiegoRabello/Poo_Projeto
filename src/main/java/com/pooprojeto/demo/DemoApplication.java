@@ -15,10 +15,7 @@ public class DemoApplication {
 
         Menu.limpaConsole();
         alimentaBancoDeDados();
-
         Menu.menuPrincipal();
-        // Advertencia.adicionarAdvertencia();
-        // Advertencia.listarAdvertencias();
 
     }
     public static void alimentaBancoDeDados() {

@@ -7,57 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Advertencia {
-    //  private Map<String, List<String>> advertencias;
 
-    
-    // private static int contador = 1;
-    
-    // private int idAdvertencias;
-    // private static String explicacao;
-    // private Aluno aluno;
-    
-    // public Advertencia(String explicacao, Aluno aluno) {
-    //     this.aluno = aluno;
-    //     this.explicacao = explicacao;
-    //     this.idAdvertencias = contador;
-    //     contador++;
-    // }
-
-    // public static String getExplicacao() {
-    //     return explicacao;
-    // }
-
-    // public void setExplicacao(String explicacao) {
-    //     this.explicacao = explicacao;
-    // }
-
-    // public Aluno getAluno() {
-    //     return aluno;
-    // }
-
-    // public int getIdAdvertencias() {
-    //     return idAdvertencias;
-    // }
-
-    // public static void lancarAdvertenciaAutomatica() {
-    //     Scanner scanner = new Scanner(System.in);
-    //     Scanner sc = new Scanner(System.in);
-    //     Aluno.listarAlunos();
-    //     System.out.print("Digite o Número do Aluno: ");
-    //     int alunoIndex = scanner.nextInt() - 1;
-    //     Aluno aluno = Aluno.getAlunos().get(alunoIndex);
-        
-    //     System.out.println("Digite o motivo da advertencia: ");
-    //     String motivo = sc.nextLine(); // removed extra scanner.nextLine() call
-        
-    //     Advertencia advertencia = new Advertencia(motivo, aluno);
-    //     // add advertencia to a collection or list, e.g.:
-    //     Advertencia.getAdvertencias().add(advertencia);
-    // }
-    
-
-
- // Mapa que associa alunos com suas respectivas instâncias
     private Map<String, Aluno> alunos;
 
     public Advertencia() {

@@ -9,10 +9,11 @@ import org.springframework.aop.config.AdviceEntry;
 import classesAntigas.Endereco;
 
 public class Professor extends Funcionario {
+    Avaliacao avaliacao;
     // Atributos Estáticos
     private static ArrayList<Professor> professores = new ArrayList<Professor>();
 
-    // Construtores
+    // Construtor
     public Professor(String nome, String cpf, String email, String telefone, String login,
             String senha, double salario) {
         super(nome, cpf, email, telefone, login, senha, salario);
@@ -22,6 +23,7 @@ public class Professor extends Funcionario {
     public Professor(String nome, String cpf, String email, String telefone, String login,
             String senha, Endereco endereco, double salario) {
         super(nome, cpf, email, telefone, login, senha, endereco, salario);
+        this.avaliacoes = new ArrayList<>();
         professores.add(this);
     }
 
@@ -103,27 +105,18 @@ public class Professor extends Funcionario {
         double escolhaNovaNota;
 
         // Lançar notas dos alunos de uma turma ou disciplina.
-        System.out.println("Selecione um aluno para lançar a nota: ");
+        System.out.println("\nSelecione um aluno para lançar a nota: ");
         Aluno.listarAlunos();
         Scanner scanner3 = new Scanner(System.in);
-        System.out.print("Digite o Número do Aluno: ");
+        System.out.print("\nDigite o Número do Aluno: ");
         int alunoIndex = scanner3.nextInt() - 1;
         Aluno aluno = Aluno.getAlunos().get(alunoIndex);
 
-        System.out.println("Selecione a disciplina: ");
+        System.out.println("\nSelecione a disciplina: ");
         Disciplina.listarDisciplinas();
-        System.out.print("Digite o Número da Disciplina: ");
+        System.out.print("\nDigite o Número da Disciplina: ");
         int disciplinaIndex = scanner3.nextInt() - 1;
         Disciplina disciplina = Disciplina.getDisciplinas().get(disciplinaIndex);
-
-        // System.out.print("Digite a nota 1 do aluno: ");
-        // double nota1 = scanner.nextDouble();
-
-        // System.out.print("Digite a nota 2 do aluno: ");
-        // double nota2 = scanner.nextDouble();
-
-        // System.out.print("Digite a nota rec do aluno: ");
-        // double nota3 = scanner.nextDouble();
 
         System.out.println("Qual nota deseja incluir do Aluno " + aluno.getNome());
         System.out.println("""
@@ -283,6 +276,16 @@ public class Professor extends Funcionario {
             System.out.println((i + 1) + ". " + Professor.getProfessores().get(i).getNome());
         }
     }
+
+    private List<String> avaliacoes;
+    public void adicionarAvaliacao(String avaliacao) {
+        avaliacoes.add(avaliacao);
+    }
+
+    public List<String> listarAvaliacao() {
+        return new ArrayList<>(avaliacoes);
+    }
+
     
 }
 

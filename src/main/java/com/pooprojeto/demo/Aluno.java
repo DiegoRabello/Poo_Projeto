@@ -170,7 +170,9 @@ public class Aluno extends Pessoa {
                 System.out.println("Nota 3: " + lancamentoNota.getNotaRec()+"\n");
                
             }
+        
         }
+        
     }
     public static void calculaMedia(LancamentoNota lancamentoNota) {
 
@@ -202,5 +204,5 @@ public class Aluno extends Pessoa {
         return new ArrayList<>(advertencias);
     }
 
-
+    
 }
